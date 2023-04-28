@@ -536,3 +536,15 @@ integral_(a)^(b) t(x) d x = frac(b - a, n) sum_(k=1)^(n) frac(t(a + (k - 1) dot 
 $
 
 $n$ steht dabei für die Anzahl der Trapeze, $a$ ist der Anfang und $b$ das Ende des Integrals. #cite("BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993", "BOOK:Das-kleine-Buch-der-Integralrechnung:2013", "BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015") Im Sachkontext sind die Integralgrenzen als $a = -1$ und $b = 1$ festgelegt, denn in diesem Bereich befindet sich der Einheitskreis ($f_1(x)$, $f_2(x)$ und demnach auch $g(x)$ sind nur im Intervall $[-1,1]$ überhaupt definiert), durch Einsetzen der Werte und Vereinfachen ergibt sich folgende Form.
+
+
+#pagebreak()
+
+= Fazit
+
+Das Ziel der vorliegenden Arbeit war, die Frage "Pi ohne Kreis? Wird Pi ohne den Zusammenhang mit der Geometrie eines Kreises verwendet? (Existieren Sachverhalte, in denen Pi ohne Zusammenhang mit der Geometrie eines Kreises Verwendung findet?)" zu beantworten, um das Verständnis der Kreiszahl $pi$ zu verbessern. Es wurde dazu anfänglich die Hypothese aufgestellt, dass $pi$ definiert ist als das Verhältnis des Durchmessers eines Kreises zu seinem Umfang und so ihre Verwendung immer einen Zusammenhang mit jenem Verhälnis und damit zur Geometrie des Kreises haben müsste. Um die Richtigkeit der anfänglichen Hypothese zu belegen (oder zu widerlegen) wurde an einzelnen Sachverhalten überprüft, ob sie zutrifft, ob sich in dem entsprechenden Sachverhalt eine Verbindung zwischen $pi$ und dem Kreis belegen oder widerlegen lässt. Bei allen hierbei behandelten Sachverhalten trifft die Hypothese zu. In jeder einzelnen ließ sich eindeutig nachweisen, dass ein Zusammenhang zwischen $pi$ und der Geometrie des Kreises besteht. Es kann jedoch nicht deduktiv geschlossen werden, dass die Hypothese dieser Arbeit gesichert ist, denn in dieser Arbeit konnten nicht alle bekannten Sachverhalte untersucht werden, die nicht offensichtlich eine Verbindung zwischen Verwendung von $pi$ und der Geometrie des Kreises aufweisen. Es ist ebenso nicht klar, ob eventuell auch Sachverhalte existieren könnten, die in der Mathematik noch nicht bekannt sind, nie sein werden. Es sei in Frage zu stellen, ob es überhaupt möglich ist, die Hypothese dieser Arbeit zu beweisen. Zur Beantwortung der zentralen Frage dieser Arbeit: für alle in dieser Arbeit untersuchten Sachverhalte konnte bewiesen werden, dass ein Zusammenhang zwischen $pi$ und Geometrie des Kreises besteht. Es kann daraus aber nicht auf eine allgemeine gültige Gesetzmäßigkeit geschlossen werden.
+
+
+= Ausblick
+
+Für Folgearbeiten würde sich anbieten, weitere Sachverhalte, die in dieser Arbeit keine Erwähnung finden, bezüglich des Zusammenhanges zwischen $pi$ und der Geometrie des Kreises zu untersuchen, um die Ergebnisse dieser Arbeit zu stärken oder anzuzweifeln. In diesem Zusammenhang ist auch wichtig, zu klären, auf welche Art und Weise sich $pi$ überhaupt in einem Sachverhalt nachweisen lässt (mag es sein, dass $pi$ nur durch die Geometrie des Kreises überhaupt nachweisbar ist).
