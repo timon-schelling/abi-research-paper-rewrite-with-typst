@@ -297,7 +297,6 @@ Die Idee im nächten Schritt: den Kreis mit Flächen anzunähern, deren Inhalt s
           #place(center + bottom, dy: 8pt, text(fill: color1, [$ a = x $]))
         ])
       ])
-      
     ])
   ],
   caption: [
@@ -336,11 +335,11 @@ $r$ wurde, um $pi$ zu berechnen, weiter oben als $r = 1$ definiert. Durch Einset
 #figure(
   [
     #rect(width: 320pt, height: 240pt, inset: 0pt, stroke: none)[
-      #place(left + horizon, 
+      #place(left + horizon,
         default_coordinate_system([
-          #place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+          #place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   stroke: color3,
                   closed: false,
@@ -349,9 +348,9 @@ $r$ wurde, um $pi$ zu berechnen, weiter oben als $r = 1$ definiert. Durch Einset
               )
             )
           )
-          #place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+          #place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   stroke: color1,
                   closed: false,
@@ -384,12 +383,12 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
 #figure(
   [
     #rect(width: 320pt, height: 240pt, inset: 0pt, stroke: none)[
-      #place(left + horizon, 
+      #place(left + horizon,
         default_coordinate_system([
-          
-          #let trapezoid(..args) = place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+
+          #let trapezoid(..args) = place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   fill: bgcolor2,
                   stroke: color2,
@@ -403,13 +402,13 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
           #trapezoid((-50pt, 86.6pt), (-50pt, -86.6pt), (0pt, -100pt), (0pt, 100pt))
           #trapezoid((50pt, -86.6pt), (50pt, 86.6pt), (0pt, 100pt), (0pt, -100pt))
           #trapezoid((100pt, 0pt), (50pt, -86.6pt), (50pt, 86.6pt))
-          
-          #place(center + horizon, 
+
+          #place(center + horizon,
             line(length: 100%, stroke: color2)
           )
-          #place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+          #place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   stroke: color3,
                   closed: false,
@@ -418,9 +417,9 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
               )
             )
           )
-          #place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+          #place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   stroke: color1,
                   closed: false,
@@ -451,12 +450,12 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
 #figure(
   [
     #rect(width: 320pt, height: 240pt, inset: 0pt, stroke: none)[
-      #place(left + horizon, 
+      #place(left + horizon,
         default_coordinate_system([
-          
-          #let trapezoid(..args) = place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+
+          #let trapezoid(..args) = place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   fill: bgcolor2,
                   stroke: color2,
@@ -476,13 +475,13 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
           #trapezoid((60pt, -80pt), (60pt, 80pt), (40pt, 91.65pt), (40pt, -91.65pt))
           #trapezoid((80pt, 60pt), (80pt, -60pt), (60pt, -80pt), (60pt, 80pt))
           #trapezoid((100pt, 0pt), (80pt, 60pt), (80pt, -60pt))
-          
-          #place(center + horizon, 
+
+          #place(center + horizon,
             line(length: 100%, stroke: color2)
           )
-          #place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+          #place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   stroke: color3,
                   closed: false,
@@ -491,9 +490,9 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
               )
             )
           )
-          #place(center + horizon, 
-            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none, 
-              move(dx: 50%, dy: 50%, 
+          #place(center + horizon,
+            rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none,
+              move(dx: 50%, dy: 50%,
                 path(
                   stroke: color1,
                   closed: false,

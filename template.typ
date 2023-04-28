@@ -4,10 +4,11 @@
   date: none,
   bib: none,
   bib-title: none,
+  numbering-skip-outline: true,
   body,
 ) = {
   set document(author: authors, title: title)
-  set page(numbering: "1", number-align: center)
+  set page(numbering: if numbering-skip-outline { none } else { "1" })
   set text(font: "Linux Libertine", lang: "de")
   set heading(numbering: "1.1")
 
@@ -31,6 +32,11 @@
   outline(depth: 5, indent: true)
   pagebreak()
 
+  // Page numbering.
+  set page(numbering: "1")
+  if numbering-skip-outline {
+    counter(page).update(1)
+  }
 
   // Main body.
   set par(justify: true)
@@ -60,12 +66,12 @@
   if inner {
     radius = radius / calc.cos(halfstep)
   }
-  
+
   let side = calc.tan(halfstep) * radius
 
   let calc-x(n) = (calc.cos((step * n) - halfstep + (calc.pi/2)) * radius)
   let calc-y(n) = (calc.sin((step * n) - halfstep + (calc.pi/2)) * radius)
-  
+
   let offset-x = 0 * radius
   let offset-y = 0 * radius
 
@@ -87,11 +93,11 @@
     let y = (calc-y(n) + offset-y)
     ((x, y),)
   }
-  
+
   let vertices = for n in range(sides) {
     calc-vert(n)
   }
-  
+
   polygon(
     fill: fill,
     stroke: stroke,
@@ -110,7 +116,7 @@
 ) = {
   let x-lines = calc.ceil((width - x-start) / x-spacing)
   let y-lines = calc.ceil((height - y-start) / y-spacing)
-  
+
   rect(width: width, height: height, inset: 0pt, stroke: none)[
       #for n in range(x-lines) {
         place(top + left, line(start: ((n * x-spacing) + x-start, 0%), length: height, angle: 90deg, stroke: stroke))
@@ -150,28 +156,28 @@
     let point_minus(a, b) = {
       (x: a.x - b.x, y: a.y - b.y)
     }
-  
+
     let point_mirror(a) = {
       (x: -a.x, y: -a.y)
     }
-    
+
     let a = point_minus(start, center)
     let b = point_minus(end, center)
-  
+
     let q1 = a.x * a.x + a.y * a.y
     let q2 = q1 + a.x * b.x + a.y * b.y
     let k2 = (4.0 / 3.0) * (calc.sqrt(2.0 * q1 * q2) - q2) / ((a.x * b.y) - (a.y * b.x))
-  
+
     let control_1 = (x: center.x + a.x - k2 * a.y, y: center.y + a.y + k2 * a.x)
     let control_2 = (x: center.x + b.x + k2 * b.y, y: center.y + b.y - k2 * b.x)
-  
+
     control_1 = point_minus(control_1, start)
     control_2 = point_minus(control_2, end)
-  
+
     control_1 = point_mirror(control_1)
-  
+
     (
-      ((start.x, start.y), (control_1.x, control_1.y)), 
+      ((start.x, start.y), (control_1.x, control_1.y)),
       ((end.x, end.y), (control_2.x, control_2.y))
     )
   }
@@ -181,7 +187,7 @@
   let end = end - 180deg
 
   let segment = (end - start) / segments
-  
+
   let segs = for n in range(segments) {
     let a = (x: - (calc.sin(start + (n * segment))), y: calc.cos(start + (n * segment)))
     let b = (x: - (calc.sin(start + ((n + 1) * segment))), y: calc.cos(start + ((n + 1) * segment)))
@@ -197,7 +203,7 @@
     }
   }
   ret.push(segs.last())
-  
+
   ret.map(
     ((a, b)) => {
       let (ax, ay) = a
