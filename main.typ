@@ -5,7 +5,7 @@
   authors: (
     "Timon Schelling",
   ),
-  date: "April 27, 2023",
+  date: "27. April 2023",
   bib: "refs.bib",
   bib-title: "Literatur",
 )
