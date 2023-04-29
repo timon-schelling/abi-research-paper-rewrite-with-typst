@@ -135,7 +135,7 @@
   strocke: black,
   angle: 0deg
 ) = rotate(angle + 90deg, rect(width: size, height: length, inset: 0pt, stroke: none)[
-  #line(length: length, start: (50%, 0%), angle: 90deg)
+  #line(length: 100%, start: (50%, 0%), angle: 90deg)
   #place(top + center, regular_polygon(sides: 3, radius: size, fill: fill))
 ])
 

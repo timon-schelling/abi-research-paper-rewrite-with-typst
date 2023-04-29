@@ -15,22 +15,22 @@
 #let color2 = rgb("#149900")
 #let color3 = rgb("#0F00B6")
 #let color4 = rgb("#A3006A")
-#let color5 = rgb("#B6A400")
+#let color5 = rgb("#F5C000")
 #let color6 = rgb("#BD4800")
 #let color7 = rgb("#8617C2")
 #let color8 = rgb("#00ADA8")
 #let color9 = rgb("#81BD00")
 
-#let bgcolor0 = color0.lighten(85%)
-#let bgcolor1 = color1.lighten(85%)
-#let bgcolor2 = color2.lighten(85%)
-#let bgcolor3 = color3.lighten(85%)
-#let bgcolor4 = color4.lighten(85%)
-#let bgcolor5 = color5.lighten(85%)
-#let bgcolor6 = color6.lighten(85%)
-#let bgcolor7 = color7.lighten(85%)
-#let bgcolor8 = color8.lighten(85%)
-#let bgcolor9 = color9.lighten(85%)
+#let bgcolor0 = color0.lighten(80%)
+#let bgcolor1 = color1.lighten(70%)
+#let bgcolor2 = color2.lighten(70%)
+#let bgcolor3 = color3.lighten(70%)
+#let bgcolor4 = color4.lighten(70%)
+#let bgcolor5 = color5.lighten(70%)
+#let bgcolor6 = color6.lighten(70%)
+#let bgcolor7 = color7.lighten(70%)
+#let bgcolor8 = color8.lighten(70%)
+#let bgcolor9 = color9.lighten(70%)
 
 #let default_coordinate_system(body) = rect(width: 240pt, height: 240pt, inset: 0pt, stroke: none)[
   #place(center + horizon, help_lines())
@@ -110,7 +110,7 @@ Diese Erkentnisse über die Division reichen aus, um im Folgenden eine formale D
 
 === Kreiszahl Pi
 
-Um $pi$ als Kreiszahl zu begreifen, fehlt an dieser Stellen noch das Verständnis der Geometrie des Kreises. Aus diesem Grund wird im Folgenden seine Definition genauer untersucht. Ein Kreis ist definiert als zweidimensionale Fläche. Sie wird begrenzt durch eine konstant gekrümmte Linie, verlaufend auf allen Punkten, die in einer Entfernung von $r$ von einem Mittelpunkt $O$ liegen. Die Strecke $r$ wird Radius genannt. Der zweifache Radius nennt sich Durchmesser $d$. Er beschreibt eine Strecke verlaufend durch den Mittelpunkt und begrenzt an beiden Enden durch einen Punkt, der auf der Begrenzung des Kreises liegt. #cite("BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015") Diese Definition besteht schon sehr lange, schon Euklid verwendete sie. Er soll den Kreis wie folgt definierte haben: \glqq{}A circle is a plane figure bounded by one curved line, and such that all straight lines drawn from a certain point within it to the bounding line, are equal. The bounding line is called its circumference and the point, its centre.\grqq{} #cite("BOOK:Euclid-books-I-II:1883") Diese Definition für einen Kreis mit dem Radius $r = 1$ kann grafisch folgendermaßen dargestellt werden. #cite("BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015")
+Um $pi$ als Kreiszahl zu begreifen, fehlt an dieser Stellen noch das Verständnis der Geometrie des Kreises. Aus diesem Grund wird im Folgenden seine Definition genauer untersucht. Ein Kreis ist definiert als zweidimensionale Fläche. Sie wird begrenzt durch eine konstant gekrümmte Linie, verlaufend auf allen Punkten, die in einer Entfernung von $r$ von einem Mittelpunkt $O$ liegen. Die Strecke $r$ wird Radius genannt. Der zweifache Radius nennt sich Durchmesser $d$. Er beschreibt eine Strecke verlaufend durch den Mittelpunkt und begrenzt an beiden Enden durch einen Punkt, der auf der Begrenzung des Kreises liegt. #cite("BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015") Diese Definition besteht schon sehr lange, schon Euklid verwendete sie. Er soll den Kreis wie folgt definierte haben: "A circle is a plane figure bounded by one curved line, and such that all straight lines drawn from a certain point within it to the bounding line, are equal. The bounding line is called its circumference and the point, its centre." #cite("BOOK:Euclid-books-I-II:1883") Diese Definition für einen Kreis mit dem Radius $r = 1$ kann grafisch folgendermaßen dargestellt werden. #cite("BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015")
 
 #figure(
   [
@@ -322,11 +322,11 @@ $
 Daraus ergibt sich nach anschließendem Auflösen nach $y$, $f_1(x)$ und $f_2(x)$.
 
 $
-r^2       & = x^2 + y^2 space.quad          & | - x^2  \
-r^2 - x^2 & = y^2                           & | sqrt(()) \
-y         & = minus.plus sqrt(r^2 - x^2)    &          \
-f_1(x)    & = sqrt(r^2 - x^2)               &          \
-f_2(x)    & = - sqrt(r^2 - x^2)             &          \
+r^2       & = x^2 + y^2                        & | - x^2       \
+r^2 - x^2 & = y^2                              & | sqrt(space) \
+y         & = minus.plus sqrt(r^2 - x^2) space &               \
+f_1(x)    & = sqrt(r^2 - x^2)                  &               \
+f_2(x)    & = - sqrt(r^2 - x^2)                &               \
 $
 
 $r$ wurde, um $pi$ zu berechnen, weiter oben als $r = 1$ definiert. Durch Einsetzen von $r = 1$ und anschließendes Vereinfachen ergeben sich die Funktionen $f_1(x) = sqrt(1 - x^2)$ und $f_2(x) = - sqrt(1 - x^2)$ für einen Kreis mit dem Radius $r = 1$ (Einheitskreis). $f_1(x)$ stellt die obere und $f_2(x)$ die untere Seite des Kreises dar. Wie die obere und untere Seite des Kreises, sind auch $f_1(x)$ und $f_2(x)$ die Spiegelung der jeweils anderen Funktion an der $x$-Achse ($f_1(x) = - f_2(x)$). #cite("ARTICLE:CIRCULAR-REASONING-WHO-FIRST-PROVED-THAT-C/d-IS-A-CONSTANT:2013", "BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015")
@@ -403,6 +403,8 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
           #trapezoid((50pt, -86.6pt), (50pt, 86.6pt), (0pt, 100pt), (0pt, -100pt))
           #trapezoid((100pt, 0pt), (50pt, -86.6pt), (50pt, 86.6pt))
 
+          //todo: add missing l lable
+
           #place(center + horizon,
             line(length: 100%, stroke: color2)
           )
@@ -476,6 +478,8 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
           #trapezoid((80pt, 60pt), (80pt, -60pt), (60pt, -80pt), (60pt, 80pt))
           #trapezoid((100pt, 0pt), (80pt, 60pt), (80pt, -60pt))
 
+          //todo: add missing l lable
+
           #place(center + horizon,
             line(length: 100%, stroke: color2)
           )
@@ -537,13 +541,813 @@ $
 
 $n$ steht dabei für die Anzahl der Trapeze, $a$ ist der Anfang und $b$ das Ende des Integrals. #cite("BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993", "BOOK:Das-kleine-Buch-der-Integralrechnung:2013", "BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015") Im Sachkontext sind die Integralgrenzen als $a = -1$ und $b = 1$ festgelegt, denn in diesem Bereich befindet sich der Einheitskreis ($f_1(x)$, $f_2(x)$ und demnach auch $g(x)$ sind nur im Intervall $[-1,1]$ überhaupt definiert), durch Einsetzen der Werte und Vereinfachen ergibt sich folgende Form.
 
+$
+integral_(a)^(b) t(x) d x  &= frac(b - a, n) &sum_(k=1)^(n) frac(t(a + (k - 1) dot frac(b - a, n)) + t(a + k dot frac(b - a, n)), 2) \
+integral_(-1)^(1) t(x) d x &= frac(2, n) &sum_(k=1)^(n) frac(t(-1 + (k - 1) dot frac(2, n)) + t(-1 + k dot frac(2, n)), 2)           \
+$
 
-#pagebreak()
+Der Term $t(-1 + (k - 1) dot frac(2, n))$ steht für die eine und $t(-1 + k dot frac(2, n))$ für die andere Seitenlängen jedes der den Kreis füllenden Trapeze. $g(x)$ wurde weiter oben als Funktion, die genau dafür steht, definiert. Wird die Funktion $g(x)$ für $t(x)$ in diese Form eingesetzt, aufgelöst und $n$ gegen Unendliche laufen gelassen, so ergibt sich eine Formel zur Berechnung von $pi$.
+
+$
+& pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) frac(g(-1 + (k - 1) dot frac(2, n)) + g(-1 + k dot frac(2, n)), 2)                                                                            \
+& pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) frac(2 dot sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2) + 2 dot sqrt(1 - (-1 + k dot frac(2, n))^2), 2)                                          \
+& pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) frac(2 dot sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2), 2) + frac(2 dot sqrt(1 - (-1 + k dot frac(2, n))^2), 2)                                 \
+& pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) frac(cancel(2) dot sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2), cancel(2)) + frac(cancel(2) dot sqrt(1 - (-1 + k dot frac(2, n))^2), cancel(2)) \
+& pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2) + sqrt(1 - (-1 + k dot frac(2, n))^2)                                                               \
+$
+
+Wenn $n$ beispielsweise bis $n = 1000000$ läuft, dann entspricht das Ergebnis bis zur neunten Nachkommanstelle dem tatsächlichen Wert von $pi$. #cite("BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015", "ARTICLE:The-Quest-for-Pi:1996")
+
+$
+& n = 1000000                                                                                                                            \
+& pi approx frac(2, n) sum_(k=1)^(n) sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2) + sqrt(1 - (-1 + k dot frac(2, n))^2) = 3.14159265 02636 \
+$
+
+Wichtig ist an dieser Stelle anzumerken, dass diese komplexe Formel zur Berechnung von $pi$ eindeutig vom Kreis und seiner Geometrie abgeleitet ist. Ihr liegt die Idee, den Einheitskreis als Funktion zu repräsentieren und dann ihr Integral, somit logischerweise auch den Flächeninhalt des Kreises, mit Hilfe der Trapezsumme anzunähern und so $pi$ zu bestimmen. Die entwickelte Fromel:
+
+$
+pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2) + sqrt(1 - (-1 + k dot frac(2, n))^2)
+$
+
+kann zweifellos der 1. Kategorie zugeordnet werden, denn ihr Zusammenhang mit der Geometrie des Kreises wurde im Zuge ihrer Entwicklung eindeutig belegt.
+
+=== Gregory Galperins Billiard Problem
+
+Gregory Galperin stellt in seiner Arbeit "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)", eine Methode zur Berechung von $pi$ vor. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019") Sie ist nicht darauf angelegt besonders schnell, effektiv oder effizient zu sein, aber sie wird von zahlreichen Mathematikern als sehr elegant und lehreich angesehen. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Im Folgenden wird sie genau erklärt, um sie im Anschluss einer der oben genannten Kategorien zu zuordnen. Die folgende Erläuterung weicht von Galperins ursprünglicher Methode in Teilen ab, verändert aber nichts an der zu Grunde liegenden Mathematik. #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017")
+
+Ein Objekt der Masse $M$ bewegt sich mit der Geschwindigkeit $V$ entlang einer Gerade auf ein zweites Objekt der Masse $m$ zu, das stationär ist (seine Geschwindigkeit $v$ ist Null), bevor es perfekt elastisch damit kollidiert (d. h. vor und nach der Kollision hat das System dieselbe Energie), #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "ARTICLE:PLAYING-POOL-WITH-PI:2003") das zweite Objekt in Richtung einer unbeweglichen Wand (gedacht könnte die Wand eine unendliche Masse haben) treibt. #cite("VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017") Das zweite Objekt wird nach einer weiteren perfekten elastischen Kollision mit der Wand reflektiert und kollidiert erneut mit dem ersten Objekt. Dieser Vorgang wiederholt sich, bis sich beide Objekte von der Wand entfernen und die Geschwindigkeit $V$ des ersten Objekts die Geschwindigkeit $v$ des zweiten Objekts übersteigt. Es gelten dabei nur der Energie- und Impulserhaltungssatz, keine anderen physikalischen Gesetze. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019") Das beschriebene System ist in der folgenden Grafik für die ersten zwei Kollisionen modelhaft dargestellt.
+
+#figure(
+  [
+    #rect(width: 350pt, height: 350pt, inset: 0pt, stroke: none)[
+      #place(top + center, rect(width: 100%, height: 100pt, inset: 0pt, stroke: none)[
+        #place(horizon + left, line(length: 100%, stroke: black, angle: 90deg))
+        #place(horizon + right, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
+          $ M $
+          #place(horizon + left, dx: -44%, axis(length: 85%, angle: 180deg))
+          #place(horizon + left, dx: -50%, dy: 10pt, [$ V_0 $])
+        ]))
+        #place(horizon + center, dx: 5%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
+          $ m $
+        ]))
+      ])
+      #place(horizon + center, rect(width: 100%, height: 100pt, inset: 0pt, stroke: none)[
+        #place(horizon + left, line(length: 100%, stroke: black, angle: 90deg))
+        #place(horizon + center, dx: 15%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
+          $ M $
+          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg))
+          #place(horizon + left, dx: -33.5%, dy: 10pt, [$ V_1 $])
+        ]))
+        #place(horizon + left, dx: 15%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
+          $ m $
+          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg))
+          #place(horizon + left, dx: -33.5%, dy: 10pt, [$ v_1 $])
+        ]))
+      ])
+      #place(bottom + center, rect(width: 100%, height: 100pt, inset: 0pt, stroke: none)[
+        #place(horizon + left, line(length: 100%, stroke: black, angle: 90deg))
+        #place(horizon + center, dx: 5%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
+          $ M $
+          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg))
+          #place(horizon + left, dx: -33.5%, dy: 10pt, [$ V_1 $])
+        ]))
+        #place(horizon + left, dx: 7.5%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
+          $ m $
+          #place(horizon + right, dx: 29%, axis(length: 55%))
+          #place(horizon + right, dx: 33.5%, dy: 10pt, [$ v_1 $])
+        ]))
+      ])
+    ]
+  ],
+  caption: [
+    Galperins Billiard Problem für die ersten zwei Kollision modelhaft dargestellet
+  ]
+)
+
+Um Galperins Methode durchzuführen, ist hier die Wahl eines Verhältnisses $d$ der beiden Massen $M$ und $m$ ($d = frac(M, n)$) erforderlich. Für $d$ muss dabei gelten $d = 10^(2(n-1)) and n in NN^*$. Theoretisch könnten alle Kollisionen gezählt werden. Nennen wir diese Anzahl an Kollisionen $K$. Wie Galperin beschreibt, ergäbe sich für $K = floor(pi dot 10^((n-1)))$. $K$ kann nur ganzzahlige Werte haben, denn im definierten System existieren nur ganze Kollisionen, die gezählt werden können. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019") $K$ ist equivalent zu den ersten $n$ Stellen von $pi$ somit ist $Pi = frac(K, 10^((n-1)))$ ein Näherungswert für $pi$, der für immer größere $n$ gegen $pi$ strebt. In der folgenden Tabelle sind Werte für $K$, $d$ und dem daraus berechnenten Näherungswert $Pi$ für $pi$ bis $n=9$ aufgelistet.
+
+#figure(
+  [
+    #table(
+      inset: 8pt,
+      columns: (auto, auto, auto, auto),
+      [$n$], [$K$], [$d$], [$Pi$],
+      [
+        $1$ \
+        $2$ \
+        $3$ \
+        $4$ \
+        $5$ \
+        $6$ \
+        $7$ \
+        $8$ \
+        $9$ \
+      ],
+      align(left)[
+        $3$        \
+        $31$       \
+        $314$      \
+        $3141$     \
+        $31415$    \
+        $314159$   \
+        $3141592$  \
+        $31415926$ \
+        $314159265$\
+      ],
+      align(left)[
+        $10^0$    \
+        $10^2$    \
+        $10^4$    \
+        $10^6$    \
+        $10^8$    \
+        $10^(10)$ \
+        $10^(12)$ \
+        $10^(14)$ \
+        $10^(16)$ \
+      ],
+      align(left)[
+        $3$          \
+        $3.1$        \
+        $3.14$       \
+        $3.141$      \
+        $3.1415$     \
+        $3.14159$    \
+        $3.141592$   \
+        $3.1415926$  \
+        $3.14159265$ \
+      ]
+    )
+  ],
+  caption: [
+    Galperins Billiard Problem für die ersten zwei Kollision modelhaft dargestellet
+  ]
+)
+
+Diese Werte können mittels einer Physiksimulation bestätigt werden. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:How-colliding-blocks-act-like-a-beam-of-light-to-compute-pi.:2019", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Wie bereits erwähnt, gelten in der gedachten Welt, in der Galperins Methode durchgeführt wird, der Energie- und Impulserhaltungssatz. Der Energieerhaltungssatz kann für $M$, $m$ und den dazugehörigen $V$, $v$ wie folgt geschrieben werden. Nennen wir dabei die gesamt Energie des Systems $q$, $q$ ist eine Konstante.
+
+$
+q  = frac(1, 2) M V^2 + frac(1, 2) m v^2
+$
+
+Am Anfang bewegt sich das zweite Objekt nicht $v_0 = 0$, $q$ entspricht deshalb der Anfangsenergie des ersten Objekts.
+
+$
+q & = frac(1, 2) M V_0^2 + frac(1, 2) m v_0^2            \
+q & = frac(1, 2) M V_0^2 + frac(1, 2) m dot 0^2         \
+q & = frac(1, 2) M V_0^2 + cancel(frac(1, 2) m dot 0^2) \
+q & = frac(1, 2) M V_0^2                                \
+$
+
+Der Energieerhaltungssatz lässt sich auch grafisch darstellen. Dazu werden die Geschwindigkeiten beider Objekte jeweils durch eine Koordinate in einem zweidimensionalen Koordinatensystem repräsentiert (jeder Punkt entspricht einem Paar an Geschwindigkeiten $V$ und $v$), ein Problem der Dynamik wird zu einem der Geomentrie. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Sei dafür $x = V$ und $y = v$ im Konfigurationsraum (zweidimensionales Koordinatensystem mit $x$ und $y$-Achse, denen jeweils ein Wert oder Freiheitsgrad eines dynamischen Systems zugeordnet wird), so ergibt sich aus dem Energieerhaltungssatz eine Ellipse mit der Gleichung $q = frac(1, 2) M x^2 + frac(1, 2) m y^2$. #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:Why-do-colliding-blocks-compute-pi:2019")
+
+#figure(
+  [
+    #default_coordinate_system([
+      #place(center + horizon, ellipse(height: 200pt, width: 200pt/3, stroke: color3))
+    ])
+  ],
+  caption: [
+    Energieerhaltungssatz als Ellipse im Konfigurationsraum
+  ]
+)
+
+An dieser Stelle wird eine Verbindung zum Kreis gesucht, eine Neuskalierung des Koordinatensystems ist von Vorteil. #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Skalierung der beiden Achsen $x = V$ und $y = v$ durch multiplizieren mit der Wurzel der jeweiligen Masse ($M$ und $m$) ermöglicht eine Umformung des Energieerhaltungssatzes zu einer Form, die der eines Kreises entspricht. Im ersten Schritt wird die Gleichung der Ellipse $q = frac(1, 2) M x^2 + frac(1, 2) m y^2$, die im Konfigurationsraum den Energieerhaltungssatzes repräsentiert, vereinfacht.
+
+$
+q  &= frac(1, 2) M V^2 + frac(1, 2) m v^2 \
+2q &= M V^2 + m v^2                       \
+$
+
+Für $x$ ergibt sich durch multiplizieren mit $sqrt(M)$ Folgendes.
+
+$
+		x   &= sqrt(M) V         \
+		x   &= sqrt(M) sqrt(V^2) \
+		x   &= sqrt(M V^2)       \
+		x^2 &= M V^2             \
+$
+
+Und für $y$ in ähnlicher Form.
+
+$
+		y   &= sqrt(m) v         \
+		y   &= sqrt(m) sqrt(v^2) \
+		y   &= sqrt(m v^2)       \
+		y^2 &= m v^2             \
+$
+
+Für $M V^2$ lässt sich dementsprechend $x^2$ und für $m v^2$ gleichermaßen $y^2$ einsetzen.
+
+
+$
+		2q &= M V^2 + m v^2 \
+		2q &= x^2 + m v^2    \
+		2q &= x^2 + y^2     \
+$
+
+Durch Auflösen nach $y$ ergibt sich die Funktion $E_1(x) = sqrt(2q - x^2)$ für die untere und die Funktion $E_2(x) = - sqrt(2q - x^2)$ für die obere Hälfte des Kreises.
+
+
+$
+		2q     & = x^2 + y^2                 \
+		y^2    & = 2q + x^2                  \
+		y      & = minus.plus sqrt(2q - x^2) \
+		E_1(x) & = sqrt(2q - x^2)            \
+		E_2(x) & = - sqrt(2q - x^2)          \
+$
+
+Die Funktionen $E_1(x) = sqrt(2q - x^2)$ und $E_2(x) = - sqrt(2q - x^2)$ beschreiben einen Kreis zentriert auf dem Ursprung, mit einem Radius $r$ von $r = sqrt(2q)$.
+
+#figure(
+  [
+    #rect(width: 335pt, height: 240pt, inset: 0pt, stroke: none)[
+      #place(left + horizon,
+        default_coordinate_system([
+          #place(center + horizon,
+            circle(radius: 100pt, stroke: color3)
+          )
+          #place(right + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
+            #line(length: 100%, start: (0%, 100%), angle: -45deg, stroke: color2)
+          ])
+          #place(center + horizon, dx: 25%, dy: -9pt, text(fill: color2, [$ r = sqrt(2q) $]))
+        ])
+      )
+      #place(right + horizon, rect(width: 100pt, height: 240pt, inset: 0pt, stroke: none)[
+        #place(left + horizon, dy: -36pt, [
+          #set text(fill: color3)
+          $ E_1(x) = sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 28pt, [
+          #set text(fill: color3)
+          $ E_2(x) = - sqrt(2q - x^2) $
+        ])
+      ])
+    ]
+  ],
+  caption: [
+    Energieerhaltungssatz als $E_1(x)$ und $E_2(x)$ im Konfigurationsraum
+  ]
+)
+
+
+Bei jeder Kollision befindet sich der Punkt, der die beiden Geschwindigkeiten der Objekte beschreibt, vor und nach der Kollision auf dem Kreis. Durch den Impulserhaltungssatz wird vorgegeben, wo sich auf dem Kreis, der im Konfigurationsraum den Energieerhaltungssatz repräsentiert, der Punkt befindet, der die Geschwindigkeiten $V$ und $v$ der beiden Objekte nach einer Kollision abbildet. Sei der Gesamtimpuls des Systems $w$, so schreibt sich der Impulserhaltungssatz wie folgt.
+
+$
+w = M V + m v
+$
+
+Durch Skalierung unter Berücksichtigung des durch $x = sqrt(M) V$ und $y = sqrt(m) v$ definierten Konfigurationsraums und anschließender Umformung nach $y$ ergibt sich die lineare Funktion $I(x) = frac(w - sqrt(M) x, sqrt(m))$ mit der Steigung $I'(x) = - frac(sqrt(M), sqrt(m))$. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019")
+
+$
+x         &= sqrt(M) V                    \
+y         &= sqrt(m) v                    \
+w         &= M V + m v                    \
+w         &= sqrt(M) x + sqrt(m) y        \
+sqrt(m) y &= w - sqrt(M) x                \
+y         &= frac(w - sqrt(M) x, sqrt(m)) \
+I(x)      &= frac(w - sqrt(M) x, sqrt(m)) \
+$
+
+Diese Funktion $I(x)$ hat zwei Schnittpunkte $P_0$ und $P_1$ mit der Funktion $E_2(x)$. Im Folgenden dargestellt für $M = m = 1$, $V = V_0 = -1$ und $v = v_0 = 0$.
+
+#figure(
+  [
+    #rect(width: 335pt, height: 240pt, inset: 0pt, stroke: none)[
+      #place(left + horizon,
+        default_coordinate_system([
+          #place(center + horizon,
+            circle(radius: 100pt, stroke: color3)
+          )
+          #place(center + horizon, rect(width: 220pt, height: 220pt, inset: 0pt, stroke: none)[
+            #place(left + bottom, line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+          ])
+          #place(left + horizon, dx: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + bottom, dy: 3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(left + horizon, dx: 4pt, dy: -10pt, [
+            #set text(fill: color2)
+            $P_0$
+          ])
+          #place(center + bottom, dx: 10pt, dy: -6pt, [
+            #set text(fill: color2)
+            $P_1$
+          ])
+        ])
+      )
+      #place(right + horizon, rect(width: 100pt, height: 240pt, inset: 0pt, stroke: none)[
+        #place(left + horizon, dy: -36pt, [
+          #set text(fill: color3)
+          $ E_1(x) = sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 28pt, [
+          #set text(fill: color3)
+          $ E_2(x) = - sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 90pt, [
+          #set text(fill: color1)
+          $ I(x) = frac(w - sqrt(M) x, sqrt(m)) $
+        ])
+      ])
+    ]
+  ],
+  caption: [
+    Erste Kollision im Konfigurationsraum
+  ]
+)
+
+$P_0$ ist der Punkt, der den Zustand des Systems vor der ersten Kollision symbolisiert und dementsprechend $P_1$ der Punkt, der das System nach der Kollision dargestellt. Nur eine Änderung von $V$ und $v$, so dass sie durch den Punkt $P_1$ repräsentiert werden kann, erfüllt sowohl den Energie- als auch den Impulserhaltungssatz und ist damit die einzig mögliche. Nach der ersten Kollision der beiden Objekte wird das zweite Objekt mit der Masse $m$ mit der Wand kollidieren. Jede Kollision mit der Wand reflektiert, wie auch von Galperin definiert, das Objekt, seine Geschwindigkeit $v$ wird negiert (Vorzeichen ändert sich $v_2 = -v_1$). Im Konfigurationsraum ist diese Kollision mit der Wand repräsentiert durch Spiegelung an der $x$-Achse. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019")
+
+#figure(
+  [
+    #rect(width: 335pt, height: 240pt, inset: 0pt, stroke: none)[
+      #place(left + horizon,
+        default_coordinate_system([
+          #place(center + horizon,
+            circle(radius: 100pt, stroke: color3)
+          )
+          #place(center + horizon, rect(width: 220pt, height: 220pt, inset: 0pt, stroke: none)[
+            #place(left + bottom,line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+          ])
+          #place(center + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+          #place(left + horizon, dx: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + bottom, dy: 3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + top, dy: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(left + horizon, dx: 4pt, dy: -10pt, [
+            #set text(fill: color2)
+            $P_0$
+          ])
+          #place(center + bottom, dx: 10pt, dy: -6pt, [
+            #set text(fill: color2)
+            $P_1$
+          ])
+          #place(center + top, dx: -10pt, dy: 6pt, [
+            #set text(fill: color2)
+            $P_2$
+          ])
+        ])
+      )
+      #place(right + horizon, rect(width: 100pt, height: 240pt, inset: 0pt, stroke: none)[
+        #place(left + horizon, dy: -36pt, [
+          #set text(fill: color3)
+          $ E_1(x) = sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 28pt, [
+          #set text(fill: color3)
+          $ E_2(x) = - sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 90pt, [
+          #set text(fill: color1)
+          $ I(x) = frac(w - sqrt(M) x, sqrt(m)) $
+        ])
+      ])
+    ]
+  ],
+  caption: [
+    Zweite Kollision im Konfigurationsraum
+  ]
+)
+
+Wichtig ist anzumerken, dass bei dieser Re­fle­xi­on der Impulserhaltungssatz nicht erfüllt ist und durch Definition nicht erfüllt sein muss, denn die Wand hat eine gedachte unendliche Masse, sie ist nach Definition unbeweglich. #cite("VIDEO:Why-do-colliding-blocks-compute-pi:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019")
+
+Dieser Vorgang von Kollision der beiden Objekte und anschließender Kollision des zweiten Objekts mit der Wand wiederholt sich, bis sich beide Objekte von der Wand entfernen ($v lt.eq 0$ und $V lt.eq 0$) und die Geschwindigkeit $V$ des ersten Objekts die Geschwindigkeit $v$ des zweiten Objekts übersteigt ($V lt.eq v$). Im Konfigurationsraum dargestellt durch ein Dreieck zwischen der $x$-Achse (repräsentiert $v lt.eq 0$ und $V lt.eq 0$) und einer Line $v = V$ (repräsentiert $V lt.eq v$ und damit die Objekte können nicht mehr kollidieren). #cite("VIDEO:Why-do-colliding-blocks-compute-pi:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019")
+
+#figure(
+  [
+    #rect(width: 335pt, height: 240pt, inset: 0pt, stroke: none)[
+      #place(left + horizon,
+        default_coordinate_system([
+          #place(center + horizon, rect(width: 220pt, height: 220pt, inset: 0pt, stroke: none)[
+            #place(left + bottom, line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+            #place(right + top, polygon(fill: bgcolor5, (0.5pt, 109.5pt), (110pt, 0pt), (110pt, 109.5pt)))
+            #place(right + top, line(start: (0pt, 110pt), end: (110pt, 0pt), stroke: color5))
+          ])
+          #place(center + horizon,
+            circle(radius: 100pt, stroke: color3)
+          )
+          #place(center + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+          #place(left + horizon, dx: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + bottom, dy: 3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + top, dy: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(left + horizon, dx: 4pt, dy: -10pt, [
+            #set text(fill: color2)
+            $P_0$
+          ])
+          #place(center + bottom, dx: 10pt, dy: -6pt, [
+            #set text(fill: color2)
+            $P_1$
+          ])
+          #place(center + top, dx: -10pt, dy: 6pt, [
+            #set text(fill: color2)
+            $P_2$
+          ])
+        ])
+      )
+      #place(right + horizon, rect(width: 100pt, height: 240pt, inset: 0pt, stroke: none)[
+        #place(left + horizon, dy: -36pt, [
+          #set text(fill: color3)
+          $ E_1(x) = sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 28pt, [
+          #set text(fill: color3)
+          $ E_2(x) = - sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 90pt, [
+          #set text(fill: color1)
+          $ I(x) = frac(w - sqrt(M) x, sqrt(m)) $
+        ])
+      ])
+    ]
+  ],
+  caption: [
+    Definition der letzen Kollision im Konfigurationsraum
+  ]
+)
+
+$P_2$ befindet sich in diesem Beispiel noch nicht in der definierten Zone (das Dreieck), der erste Schritt, der die Kollision der zwei Objekte abbildet, wiederholt sich. Bei der Kollision mit der Wand hat sich der Wert für den Gesamtimpuls $w$ so geändert, dass die Funktion $I(x)$ durch $P_2$ verläuft, der Schnittpunkt $P_3$ von $I(x)$ und $E_2(x)$. Befindet sich in der definierten Zone, es wird keine weiteren Kollisionen geben, die es zu zählen gilt. #cite("VIDEO:Why-do-colliding-blocks-compute-pi:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019")
+
+#figure(
+  [
+    #rect(width: 335pt, height: 240pt, inset: 0pt, stroke: none)[
+      #place(left + horizon,
+        default_coordinate_system([
+          #place(center + horizon, rect(width: 220pt, height: 220pt, inset: 0pt, stroke: none)[
+            #place(right + top, polygon(fill: bgcolor5, (0.5pt, 109.5pt), (110pt, 0pt), (110pt, 109.5pt)))
+            #place(left + bottom, line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+            #place(right + top, line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+            #place(right + top, line(start: (0pt, 110pt), end: (110pt, 0pt), stroke: color5))
+          ])
+          #place(center + horizon,
+            circle(radius: 100pt, stroke: color3)
+          )
+          #place(center + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+          #place(left + horizon, dx: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + bottom, dy: 3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(center + top, dy: -3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(right + horizon, dx: 3pt,
+            circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+          )
+          #place(left + horizon, dx: 4pt, dy: -10pt, [
+            #set text(fill: color2)
+            $P_0$
+          ])
+          #place(center + bottom, dx: 10pt, dy: -6pt, [
+            #set text(fill: color2)
+            $P_1$
+          ])
+          #place(center + top, dx: -10pt, dy: 6pt, [
+            #set text(fill: color2)
+            $P_2$
+          ])
+          #place(right + horizon, dx: -4pt, dy: 9pt, [
+            #set text(fill: color2)
+            $P_4$
+          ])
+        ])
+      )
+      #place(right + horizon, rect(width: 100pt, height: 240pt, inset: 0pt, stroke: none)[
+        #place(left + horizon, dy: -36pt, [
+          #set text(fill: color3)
+          $ E_1(x) = sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 28pt, [
+          #set text(fill: color3)
+          $ E_2(x) = - sqrt(2q - x^2) $
+        ])
+        #place(left + horizon, dy: 90pt, [
+          #set text(fill: color1)
+          $ I(x) = frac(w - sqrt(M) x, sqrt(m)) $
+        ])
+      ])
+    ]
+  ],
+  caption: [
+    Dritte Kollision im Konfigurationsraum
+  ]
+)
+
+Die Summe der die Punkte verbindenen Linien ergibt $K$ (im Beispiel $K = 3$). Alle Linien, die eine Kollision mit der Wand repräsentieren, verlaufen parallel zueinander (und zur $y$-Achse) und alle Linien, die eine Kollision der beiden Objekte repräsentieren, haben die Steigung $I'(x) = - frac(sqrt(M), sqrt(m))$, verlaufen somit auch parallel zueinander. An jedem Schnittpunkt $P$ bilden die jeweiligen Linien, wie im Folgenden dargestellt, einen überall equivalenten Winkel $phi$.
+
+#figure([
+    #default_coordinate_system([
+      #place(center + horizon, rect(width: 220pt, height: 220pt, inset: 0pt, stroke: none)[
+        #place(left + bottom, line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+        #place(right + top, line(start: (0pt, 0pt), end: (120pt, 120pt), stroke: color1))
+      ])
+      #place(center + horizon,
+        circle(radius: 100pt, stroke: color3)
+      )
+      #place(left + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+      #place(center + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+      #place(right + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+      #place(left + horizon, dx: -3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(center + bottom, dy: 3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(center + top, dy: -3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(right + horizon, dx: 3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(left + horizon, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 0%, dy: 25%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 135deg, end: 180deg)
+          )
+        )
+      ]))
+      #place(center + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 0%, dy: 0%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 315deg, end: 360deg)
+          )
+        )
+      ]))
+      #place(center + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 17.5%, dy: 0%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 135deg, end: 180deg)
+          )
+        )
+      ]))
+      #place(right + horizon, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 0%, dy: 0%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 315deg, end: 360deg)
+          )
+        )
+      ]))
+      #place(left + horizon, dx: 4pt, dy: -10pt, [
+        #set text(fill: color2)
+        $P_0$
+      ])
+      #place(center + bottom, dx: 10pt, dy: -6pt, [
+        #set text(fill: color2)
+        $P_1$
+      ])
+      #place(center + top, dx: -10pt, dy: 6pt, [
+        #set text(fill: color2)
+        $P_2$
+      ])
+      #place(right + horizon, dx: -4pt, dy: 9pt, [
+        #set text(fill: color2)
+        $P_4$
+      ])
+      #place(left + horizon, dx: 10pt, dy: 33pt, [$phi$])
+      #place(center + bottom, dx: -15pt, dy: -34pt, [$phi$])
+      #place(center + top, dx: 14pt, dy: 29pt, [$phi$])
+      #place(right + horizon, dx: -11pt, dy: -37.5pt, [$phi$])
+    ])
+  ],
+  caption: [
+    Winkel $phi$ im Konfigurationsraum
+  ]
+)
+
+Mit Hilfe des Kreiswinkelsatzes lässt sich beweisen, dass sich alle Kreisbögen zwischen benachbarten Punkten $P$ mit $2 phi$ bemessen lassen.
+
+#figure([
+    #default_coordinate_system([
+      #place(center + horizon, rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none)[
+        #place(left + bottom, line(start: (0pt, 0pt), end: (100pt, 100pt), stroke: color1))
+        #place(left + horizon, line(length: 100pt, stroke: color1))
+      ])
+      #place(center + horizon,
+        circle(radius: 100pt, stroke: color3)
+      )
+      #place(center + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+      #place(left + horizon, dx: -3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(center + bottom, dy: 3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(center + top, dy: -3pt,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(center + horizon,
+        circle(radius: 3pt, stroke: color2, fill: bgcolor2)
+      )
+      #place(center + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 0%, dy: 0%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 315deg, end: 360deg)
+          )
+        )
+      ]))
+      #place(center + horizon, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 0%, dy: 0%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 270deg, end: 360deg)
+          )
+        )
+      ]))
+      #place(left + horizon, dx: 4pt, dy: -10pt, [
+        #set text(fill: color2)
+        $P_0$
+      ])
+      #place(center + bottom, dx: 10pt, dy: -6pt, [
+        #set text(fill: color2)
+        $P_1$
+      ])
+      #place(center + top, dx: -10pt, dy: 6pt, [
+        #set text(fill: color2)
+        $P_2$
+      ])
+      #place(center + bottom, dx: -15pt, dy: -34pt, [$phi$])
+      #place(center + horizon, dx: -20pt, dy: -22pt, [$2 phi$])
+    ])
+  ],
+  caption: [
+    Winkel $phi$ im Konfigurationsraum
+  ]
+)
+
+Ein ganzer Kreis hat einen Winkel von $2pi$. Statt die Kollisionen zu zählen, kann also auch berechnet werden, wie oft $2phi$ summiert werden kann, bevor es größer gleich $2pi$ ist oder vereinfacht, wie oft $phi$ summiert werden kann, bevor es größer gleich $pi$ ist. Für $K$ ergibt sich dementsprechend:
+
+$
+K dot phi < pi and (K+1) dot phi gt.eq pi and K in NN^*
+$
+
+Der Winkel $phi$ berechnet sich aus der Steigung von $I(x)$, $I'(x) = - frac(sqrt(M), sqrt(m))$.
+
+#figure(
+  rect(width: 150pt, height: 150pt, inset: 0pt, stroke: none)[
+
+    #place(center + horizon, line(start: (0pt, 0pt), end: (100%, 100%), stroke: color1))
+    #place(center + horizon, rect(width: 120pt, height: 120pt, inset: 0pt, stroke: none)[
+      #place(center + top, line(length: 100%, stroke: color3))
+      #place(right + horizon, line(length: 100%, angle: 90deg, stroke: color2))
+      #place(center + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
+        #move(dx: 60%, dy: 0%,
+          path(
+            closed: false,
+            ..arc(radius: 50pt, start: 315deg, end: 360deg)
+          )
+        )
+      ]))
+      #place(right + bottom, dx: -11pt, dy: -34pt, [$phi$])
+      #place(center + top, dy: -11pt, [
+        #set text(fill: color3)
+        $1$
+      ])
+    ])
+    #place(left + bottom, dy: -30pt, [
+      #set text(fill: color1)
+      $I(x) = frac(w - sqrt(M) x, sqrt(m))$
+    ])
+    #place(right + horizon, dx: 5pt, [
+      #set text(fill: color2)
+      $frac(sqrt(M), sqrt(m))$
+    ])
+  ],
+  caption: [
+    Winkel $phi$ berechnet aus Steigung von $I(x)$
+  ]
+)
+
+Für $phi$ gilt daher Folgendes.
+
+$
+phi = arctan(frac(sqrt(m), sqrt(M)))
+$
+
+Alle Werte, die durch diese Methode für $K$, $d$ und dem daraus berechnenten Näherungswert $Pi$ für $pi$ berechnet werden können, sind identisch mit denen, die zuvor mittels Simulation berechnet wurden.
+
+#figure(
+  [
+    #table(
+      inset: 8pt,
+      columns: (auto, auto, auto, auto),
+      [$n$], [$K$], [$d$], [$Pi$],
+      [
+        $1$ \
+        $2$ \
+        $3$ \
+        $4$ \
+        $dots.v$ \
+      ],
+      align(left)[
+        $3$        \
+        $31$       \
+        $314$      \
+        $3141$     \
+        $dots.v$    \
+      ],
+      align(left)[
+        $10^0$    \
+        $10^2$    \
+        $10^4$    \
+        $10^6$    \
+        $dots.v$    \
+      ],
+      align(left)[
+        $3$          \
+        $3.1$        \
+        $3.14$       \
+        $3.141$      \
+        $dots.v$     \
+      ]
+    )
+  ],
+  caption: [
+    Werte für $K$, $d$ und $\Pi$ bis $n=4$
+  ]
+)
+
+Es ist zu erkennen, warum $K$ equivalent zu den ersten $n$ Stellen von $pi$ ist, denn der $arctan(e)$ nähert sich immer mehr dem Argument $e$ an, je kleiner dieses wird (gerechnet im Bogenmaß). #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Es gilt:
+
+$
+lim_(e -> 0) arctan(e) - e = 0
+$
+
+$e$ ist in diesem Fall gleich der Quotient der beiden Wurzeln der Massen $M$ und $m$ ($e = frac(sqrt(m), sqrt(M))$). Tabellarisch numerisch dargestellt:
+
+#figure(
+  [
+    #table(
+      inset: 8pt,
+      columns: (auto, auto, auto),
+      [$frac(sqrt(m), sqrt(M))$], [$arctan(frac(sqrt(m), sqrt(M)))$], [$abs(arctan(frac(sqrt(m), sqrt(M))))$],
+      align(left)[
+        $1$      \
+        $0.1$    \
+        $0.01$   \
+        $0.001$  \
+        $0.0001$ \
+        $dots.v$ \
+      ],
+      align(left)[
+        $arctan(1)$      \
+        $arctan(0.1)$    \
+        $arctan(0.01)$   \
+        $arctan(0.001)$  \
+        $arctan(0.0001)$ \
+        $dots.v$         \
+      ],
+      align(left)[
+        $approx 0.7853981633974$ \
+        $approx 0.0996686524912$ \
+        $approx 0.0099996666867$ \
+        $approx 0.0009999996667$ \
+        $approx 0.0000999999997$ \
+        $dots.v$                  \
+      ]
+    )
+  ],
+  caption: [
+    Werte für $K$, $d$ und $\Pi$ bis $n=4$
+  ]
+)
+
+Zusammenfassend lässt sich zu Galperins Methode $pi$ zu berechnen zeigen, dass die Anzahl der Kollisionen durch den Energieerhaltungssatz eine direkte Verbindung zum Kreis (ohne Skalierung, zu einer Ellipse) hat. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Daraus folgt, auch Galperins Methode lässt sich der 1. Kategorie zuordnen, ihr Zusammenhang mit der Geometrie des Kreises wurde eindeutig belegt.
+
+=== Basler Problem
+
+Das Basler Problem, im Grunde die Frage nach der genauen Summe aller Kehrwerte der natürlichen Zahlen zum Quadrat, wurde erstmals von Pietro Mengoli formuliert und später von Leonhard Euler gelöst. Die folgende Gleichung ist Eulers Lösung des Basler Problems. #cite("ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018")
+
+$
+frac(pi^2, 6) = sum_(n = 1)^(infinity) frac(1, n^2)
+$
+
+Es kann auf verschiedenen Arten bewiesen werden, dass auch hier eine Verbindung zwischen $pi$ und Kreis besteht. #cite("ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018") Eulers Lösung beruht beispielweise auf der Taylorreihe der Kardinalsinusfunktion, die ihrerseits wiederum im Zusammenhang mit dem Kreis definiert ist. #cite("WEB:SincFunction-Wolfram-Research:2021", "BOOK:Exploring-Eulers-Constant:2003", "ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018") Auch andere Lösungen können die Verbindung bestätigen. #cite("ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018")
+
+== Zusammenführung und Bewertung der Ergebnisse
+
+Alle in der Fallanalyse untersuchen Sachverhalte enthalten bewiesenermaßen einen Zusammenhang zwischen $pi$ und Kreis (konnten alle der 1. Kategorie zugeordnet werden). Anhand der vorliegenden Ergebnisse, sofern keine Mängel im Vorgehen nachzuweisen sind, würde sich deduktiv schließen lassen, dass die Hypothese dieser Arbeit fundiert ist, Substanz hat. Dieser Schluss würde jedoch gravierende Mängel aufweisen. Es wurden zum einen längst nicht alle bekanten Sachverhalte untersucht, die nicht offensichtlich eine Verbindung zwischen Verwendung von $pi$ und der Geometrie des Kreises aufweisen. Zum anderen ist nicht klar, ob eventuell auch Sachverhalte existieren könnten, die in der Mathematik noch nicht bekannt sind, nie sein werden. Es ist daher in Frage zu stellen, ob es überhaupt möglich ist, die Hypothese dieser Arbeit zu beweisen, obwohl kein Gegenbeweis gefunden wurde. Für alle in der Arbeit untersuchten Sachverhalte konnte bewiesen werden, dass ein Zusammenhang zwischen $pi$ und Geometrie des Kreises besteht. Daraus kann allerdings nicht auf eine allgemein gültige Gesetzmäßigkeit geschlossen werden.
 
 = Fazit
 
 Das Ziel der vorliegenden Arbeit war, die Frage "Pi ohne Kreis? Wird Pi ohne den Zusammenhang mit der Geometrie eines Kreises verwendet? (Existieren Sachverhalte, in denen Pi ohne Zusammenhang mit der Geometrie eines Kreises Verwendung findet?)" zu beantworten, um das Verständnis der Kreiszahl $pi$ zu verbessern. Es wurde dazu anfänglich die Hypothese aufgestellt, dass $pi$ definiert ist als das Verhältnis des Durchmessers eines Kreises zu seinem Umfang und so ihre Verwendung immer einen Zusammenhang mit jenem Verhälnis und damit zur Geometrie des Kreises haben müsste. Um die Richtigkeit der anfänglichen Hypothese zu belegen (oder zu widerlegen) wurde an einzelnen Sachverhalten überprüft, ob sie zutrifft, ob sich in dem entsprechenden Sachverhalt eine Verbindung zwischen $pi$ und dem Kreis belegen oder widerlegen lässt. Bei allen hierbei behandelten Sachverhalten trifft die Hypothese zu. In jeder einzelnen ließ sich eindeutig nachweisen, dass ein Zusammenhang zwischen $pi$ und der Geometrie des Kreises besteht. Es kann jedoch nicht deduktiv geschlossen werden, dass die Hypothese dieser Arbeit gesichert ist, denn in dieser Arbeit konnten nicht alle bekannten Sachverhalte untersucht werden, die nicht offensichtlich eine Verbindung zwischen Verwendung von $pi$ und der Geometrie des Kreises aufweisen. Es ist ebenso nicht klar, ob eventuell auch Sachverhalte existieren könnten, die in der Mathematik noch nicht bekannt sind, nie sein werden. Es sei in Frage zu stellen, ob es überhaupt möglich ist, die Hypothese dieser Arbeit zu beweisen. Zur Beantwortung der zentralen Frage dieser Arbeit: für alle in dieser Arbeit untersuchten Sachverhalte konnte bewiesen werden, dass ein Zusammenhang zwischen $pi$ und Geometrie des Kreises besteht. Es kann daraus aber nicht auf eine allgemeine gültige Gesetzmäßigkeit geschlossen werden.
-
 
 = Ausblick
 
