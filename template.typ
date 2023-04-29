@@ -49,7 +49,10 @@
     show bibliography: set text(8.5pt)
     show bibliography: pad.with(x: 0.5pt)
     show bibliography: set heading(numbering: "1.1")
-    bibliography(bib, title: bib-title)
+    [
+    = #bib-title
+    ]
+    bibliography(bib, title: none)
   }
 }
 
