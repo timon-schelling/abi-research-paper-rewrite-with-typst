@@ -12,9 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Typst
-        uses: lvignoli/typst-action@v1
-        with:
-          source_file: main.typ
+        run: |
+          cargo install --git https://github.com/typst/typst && \
+          typst compile main.typ
       - name: Get current date
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
