@@ -11,9 +11,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Typst
+      - name: Install typst
         run: |
-          cargo install --git https://github.com/typst/typst && \
+          cargo install --git https://github.com/typst/typst
+      - name: Compile
+        run: |
           typst compile main.typ
       - name: Get current date
         id: date
