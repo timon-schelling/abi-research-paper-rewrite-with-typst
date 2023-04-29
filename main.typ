@@ -403,7 +403,16 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
           #trapezoid((50pt, -86.6pt), (50pt, 86.6pt), (0pt, 100pt), (0pt, -100pt))
           #trapezoid((100pt, 0pt), (50pt, -86.6pt), (50pt, 86.6pt))
 
-          //todo: add missing l lable
+          #place(center + horizon, dx: 25pt, dy: 50pt,
+            axis(length: 46pt, stroke: color2, fill: color2)
+          )
+          #place(center + horizon, dx: 25pt, dy: 50pt,
+            axis(length: 46pt, stroke: color2, fill: color2, angle: 180deg)
+          )
+          #place(center + horizon, dx: 25pt, dy: 38pt, [
+            #set text(fill: color2)
+            $frac(1, 2)$
+          ])
 
           #place(center + horizon,
             line(length: 100%, stroke: color2)
@@ -478,7 +487,16 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
           #trapezoid((80pt, 60pt), (80pt, -60pt), (60pt, -80pt), (60pt, 80pt))
           #trapezoid((100pt, 0pt), (80pt, 60pt), (80pt, -60pt))
 
-          //todo: add missing l lable
+          #place(center + horizon, dx: 10pt, dy: 50pt,
+            axis(length: 16pt, stroke: color2, fill: color2)
+          )
+          #place(center + horizon, dx: 10pt, dy: 50pt,
+            axis(length: 16pt, stroke: color2, fill: color2, angle: 180deg)
+          )
+          #place(center + horizon, dx: 10pt, dy: 37pt, [
+            #set text(fill: color2)
+            $frac(1, 5)$
+          ])
 
           #place(center + horizon,
             line(length: 100%, stroke: color2)

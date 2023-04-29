@@ -132,11 +132,11 @@
   length: 100%,
   size: 2pt,
   fill: black,
-  strocke: black,
+  stroke: black,
   angle: 0deg
 ) = rotate(angle + 90deg, rect(width: size, height: length, inset: 0pt, stroke: none)[
-  #line(length: 100%, start: (50%, 0%), angle: 90deg)
-  #place(top + center, regular_polygon(sides: 3, radius: size, fill: fill))
+  #line(length: 100%, start: (50%, 0%), angle: 90deg, stroke: stroke)
+  #place(top + center, regular_polygon(sides: 3, radius: size, fill: fill, stroke: stroke))
 ])
 
 #let axes(
@@ -144,10 +144,10 @@
   height: 100%,
   size: 2pt,
   fill: black,
-  strocke: black
+  stroke: black
 ) = rect(width: width, height: height, inset: 0pt, stroke: none)[
-  #place(center + horizon, axis(length: width, size: size, fill: fill, strocke: strocke))
-  #place(center + horizon, axis(length: height, size: size, fill: fill, strocke: strocke, angle: -90deg))
+  #place(center + horizon, axis(length: width, size: size, fill: fill, stroke: stroke))
+  #place(center + horizon, axis(length: height, size: size, fill: fill, stroke: stroke, angle: -90deg))
 ]
 
 #let arc(start: 0deg, end: 90deg, radius: 100%/2, segments: 10) = {
