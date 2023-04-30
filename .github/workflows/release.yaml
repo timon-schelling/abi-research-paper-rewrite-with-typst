@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
@@ -19,17 +20,37 @@ jobs:
           run: |
             cd /data
             typst compile main.typ
+
       - name: Get current date
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
-      - uses: rickstaa/action-create-tag@v1
-        with:
-          tag: "${{ github.sha }}"
-          tag_exists_error: true
-          message: "${{ env.DATE }}-${{ github.sha }}"
+
       - name: Release
-        uses: softprops/action-gh-release@v1
+        id: release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          name: "${{ env.DATE }} ${{ github.sha }}"
-          files: main.pdf
-          tag_name: "${{ github.sha }}"
+          tag_name: ${{ github.sha }}
+          release_name: "${{ env.DATE }} ${{ github.sha }}"
+          draft: false
+          prerelease: false
+
+      - name: Delete old release assets
+        uses: mknejp/delete-release-assets@v1
+        with:
+          token: ${{ github.token }}
+          tag: ${{ steps.draft-release.outputs.tag_name }}
+          assets: '*'
+          fail-if-no-release: false
+          fail-if-no-assets: false
+
+      - name: Upload release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.release.outputs.upload_url }}
+          asset_path: main.pdf
+          asset_name: main.pdf
+          asset_content_type: application/pdf
