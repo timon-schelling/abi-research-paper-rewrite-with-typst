@@ -22,9 +22,14 @@ jobs:
       - name: Get current date
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
+      - uses: rickstaa/action-create-tag@v1
+        with:
+          tag: "${{ github.sha }}"
+          tag_exists_error: true
+          message: "${{ env.DATE }}-${{ github.sha }}"
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           name: "${{ env.DATE }} ${{ github.sha }}"
           files: main.pdf
-          tag_name: "${{ env.DATE }}-${{ github.sha }}"
+          tag_name: "${{ github.sha }}"
