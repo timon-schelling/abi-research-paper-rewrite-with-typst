@@ -11,17 +11,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install typst
-        run: |
-          cargo install --git https://github.com/typst/typst
-      - name: Compile
-        run: |
-          typst compile main.typ
+      - name: Run the build process with Docker
+        uses: addnab/docker-run-action@v3
+        with:
+          image: ghcr.io/typst/typst:latest
+          options: -v ${{ github.workspace }}:/data
+          run: |
+            cd /data
+            typst compile main.typ
       - name: Get current date
         id: date
         run: echo "DATE=$(date +%Y-%m-%d-%H:%M)" >> $GITHUB_ENV
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: "${{ env.DATE }}  ${{ env.GITHUB_SHA }}"
+          name: "${{ env.DATE }} ${{ env.GITHUB_SHA }}"
           files: main.pdf
+          tag_name: "${{ env.DATE }}-${{ env.GITHUB_SHA }}"
