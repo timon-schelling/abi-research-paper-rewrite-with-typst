@@ -29,8 +29,7 @@ jobs:
           options: -v ${{ github.workspace }}:/data
           run: |
             cd /data
-            typst compile main.typ
-            mkdir static
+            typst compile src/main.typ main.pdf
             cp main.pdf static/index.pdf
 
       - name: Upload artifact
