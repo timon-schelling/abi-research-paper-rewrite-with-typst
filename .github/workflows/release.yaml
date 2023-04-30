@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run the build process with Docker
+      - name: Compile
         uses: addnab/docker-run-action@v3
         with:
           image: ghcr.io/typst/typst:latest
@@ -44,6 +44,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v2
