@@ -22,10 +22,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
@@ -34,11 +30,13 @@ jobs:
           run: |
             cd /data
             typst compile main.typ
+            mkdir static
+            cp main.pdf static/index.pdf
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./main.pdf
+          path: ./index.pdf
 
   deploy:
     environment:
