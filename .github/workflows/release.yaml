@@ -25,6 +25,6 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-          name: "${{ env.DATE }} ${{ env.GITHUB_SHA }}"
+          name: "${{ env.DATE }} ${{ github.sha }}"
           files: main.pdf
-          tag_name: "${{ env.DATE }}-${{ env.GITHUB_SHA }}"
+          tag_name: "${{ env.DATE }}-${{ github.sha }}"
