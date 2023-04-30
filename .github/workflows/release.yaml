@@ -32,19 +32,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ github.sha }}
+          tag_name: "tag-${{ github.sha }}"
           release_name: "${{ env.DATE }} ${{ github.sha }}"
           draft: false
           prerelease: false
-
-      - name: Delete old release assets
-        uses: mknejp/delete-release-assets@v1
-        with:
-          token: ${{ github.token }}
-          tag: ${{ steps.draft-release.outputs.tag_name }}
-          assets: '*'
-          fail-if-no-release: false
-          fail-if-no-assets: false
 
       - name: Upload release
         uses: actions/upload-release-asset@v1
