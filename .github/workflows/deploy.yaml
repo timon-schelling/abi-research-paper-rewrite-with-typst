@@ -15,9 +15,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    permissions: write-all
+    environment:
+      name: web
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -32,18 +34,11 @@ jobs:
             typst compile src/main.typ main.pdf
             cp main.pdf static/index.pdf
 
-      - name: Upload artifact
+      - name: Upload
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./static
 
-  deploy:
-    environment:
-      name: web
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v2
