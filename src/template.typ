@@ -201,7 +201,7 @@
   let ret = ()
 
   for (i, e) in segs.enumerate() {
-    if calc.mod(i, 2) == 0 {
+    if calc.rem(i, 2) == 0 {
       ret.push(e)
     }
   }
