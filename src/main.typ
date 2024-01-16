@@ -44,18 +44,18 @@
 
 = Einleitung
 
-Seit die Idee der Kreiszahl $pi$ (sie wird im Weiteren noch genauer definiert und analysiert) sich in der Mathematik etabliert hat, wurden (und werden) immer wieder Methoden entwickelt (absichtlich und auch zufällig), um ihren Wert mit einer gewissen Präzision zu berechnen. In der Bibel (wichtigste Textsammlung des Judentums und Christentums) ist beispielweise indirekt ein Wert von $3$ für $pi$ erwähnt. #cite("ARTICLE:The-Quest-for-Pi:1996") Eine der frühsten erhaltenen Aufzeichnungen eines Wertes für die Kreiszahl $pi$ geht ungefähr auf das Jahr $-2000$ ($2000$ BC. / $2000$ v. Chr. nach dem Gregorianischen Kalender) zurück und beträgt nach Annäherung der Babylonier $3 + frac(1, 8)$. Zu den moderneren Formen der Berechnung von $pi$ zählt unter anderem der Chudnovsky-Algorithmus; $pi$ ist darin wie folgt definiert. #cite("ARTICLE:A-DETAILED-PROOF-OF-THE-CHUDNOVSKY-FORMULA-WITH-MEANS-OF-BASIC-COMPLEX-ANALYSIS:2020")
+Seit die Idee der Kreiszahl $pi$ (sie wird im Weiteren noch genauer definiert und analysiert) sich in der Mathematik etabliert hat, wurden (und werden) immer wieder Methoden entwickelt (absichtlich und auch zufällig), um ihren Wert mit einer gewissen Präzision zu berechnen. In der Bibel (wichtigste Textsammlung des Judentums und Christentums) ist beispielweise indirekt ein Wert von $3$ für $pi$ erwähnt. #cite(<ARTICLE:The-Quest-for-Pi:1996>) Eine der frühsten erhaltenen Aufzeichnungen eines Wertes für die Kreiszahl $pi$ geht ungefähr auf das Jahr $-2000$ ($2000$ BC. / $2000$ v. Chr. nach dem Gregorianischen Kalender) zurück und beträgt nach Annäherung der Babylonier $3 + frac(1, 8)$. Zu den moderneren Formen der Berechnung von $pi$ zählt unter anderem der Chudnovsky-Algorithmus; $pi$ ist darin wie folgt definiert. #cite(<ARTICLE:A-DETAILED-PROOF-OF-THE-CHUDNOVSKY-FORMULA-WITH-MEANS-OF-BASIC-COMPLEX-ANALYSIS:2020>)
 
 
 $ frac(1, pi) = 12 sum^infinity_(k=0) frac((-1)^k (6k)! (545140134k + 13591409), (3k)!(k!)^3 640320^(3k + 3/2)) $
 
 
-Wie beim Chudnovsky-Algorithmus ist es in der Mathematik oft nicht klar ersichtlich ob und wenn, welche Verbindung zwischen der Verwendung von $pi$ und der Geometrie des Kreises besteht. Da jedoch $pi$ erst durch die Geometrie des Kreises definiert ist, kann sachlogisch die Hypothese aufgestellt werden, dass wenn $pi$ auftaucht, ein Zusammenhang mit der Geometrie des Kreises bestehen müsste. #cite("VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018") Den Chudnovsky-Algorithmus zu erklären, würde weit über den Rahmen dieser Arbeit hinaus gehen. #cite("ARTICLE:A-DETAILED-PROOF-OF-THE-CHUDNOVSKY-FORMULA-WITH-MEANS-OF-BASIC-COMPLEX-ANALYSIS:2020") Aus diesem Grund werden weniger komplexe Sachverhalte als Beispiel heran gezogen, um die zuvor erwähnte und im Weiteren ausformulierte Hypothese zu überprüfen.
+Wie beim Chudnovsky-Algorithmus ist es in der Mathematik oft nicht klar ersichtlich ob und wenn, welche Verbindung zwischen der Verwendung von $pi$ und der Geometrie des Kreises besteht. Da jedoch $pi$ erst durch die Geometrie des Kreises definiert ist, kann sachlogisch die Hypothese aufgestellt werden, dass wenn $pi$ auftaucht, ein Zusammenhang mit der Geometrie des Kreises bestehen müsste. #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>) Den Chudnovsky-Algorithmus zu erklären, würde weit über den Rahmen dieser Arbeit hinaus gehen. #cite(<ARTICLE:A-DETAILED-PROOF-OF-THE-CHUDNOVSKY-FORMULA-WITH-MEANS-OF-BASIC-COMPLEX-ANALYSIS:2020>) Aus diesem Grund werden weniger komplexe Sachverhalte als Beispiel heran gezogen, um die zuvor erwähnte und im Weiteren ausformulierte Hypothese zu überprüfen.
 
 
 == Ideenfindung
 
-Das Thema dieser Arbeit ist aus der Methode, die Kreiszahl $pi$ zu berechnen, die erstmalig vom Mathematiker Gregory Galperin in seiner Arbeit "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)" vorgestellt wurde, abgeleitet. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019") Diese Methode soll es ermöglichen, $pi$ bis zu jeder Genauigkeit/Präzision zu berechnen, ohne technische Hilfsmittel zu nutzen. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003") Ihre genaue Funktionsweise wird im Hauptteil dieser Arbeit näher erläutert.
+Das Thema dieser Arbeit ist aus der Methode, die Kreiszahl $pi$ zu berechnen, die erstmalig vom Mathematiker Gregory Galperin in seiner Arbeit "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)" vorgestellt wurde, abgeleitet. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019>) Diese Methode soll es ermöglichen, $pi$ bis zu jeder Genauigkeit/Präzision zu berechnen, ohne technische Hilfsmittel zu nutzen. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) Ihre genaue Funktionsweise wird im Hauptteil dieser Arbeit näher erläutert.
 
 == Forschungsfrage
 
@@ -63,12 +63,12 @@ Pi ohne Kreis? Wird Pi ohne den Zusammenhang mit der Geometrie eines Kreises ver
 
 === Warum stellt sich die Frage?
 
-Die von Gregory Galperin in seinem Artikel "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)" vorgestellte Methode, um Stellen von $pi$ zu berechnen(die gestellte Frage nach der Anzahl an Kollisionen zweier Billardkugeln in einem dynamischen System), kann mit Hilfe des Energie- und Impulserhaltungssatzes in ein geometrisches Problem umgewandelt werden, das tatsächlich einen Kreis enthält #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:How-colliding-blocks-act-like-a-beam-of-light-to-compute-pi.:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") (der genaue Weg wird im Hauptteil dieser Arbeit erläutert und nachvollzogen). Aus diesem Grund stellt sich die Frage, ob nicht bei allen Verwendungen von $pi$ auf eine solche oder ähnliche Art ein Zusammenhang zur Geometrie des Kreises mathematisch bewiesen werden kann.
+Die von Gregory Galperin in seinem Artikel "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)" vorgestellte Methode, um Stellen von $pi$ zu berechnen(die gestellte Frage nach der Anzahl an Kollisionen zweier Billardkugeln in einem dynamischen System), kann mit Hilfe des Energie- und Impulserhaltungssatzes in ein geometrisches Problem umgewandelt werden, das tatsächlich einen Kreis enthält #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:How-colliding-blocks-act-like-a-beam-of-light-to-compute-pi.:2019>) #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) (der genaue Weg wird im Hauptteil dieser Arbeit erläutert und nachvollzogen). Aus diesem Grund stellt sich die Frage, ob nicht bei allen Verwendungen von $pi$ auf eine solche oder ähnliche Art ein Zusammenhang zur Geometrie des Kreises mathematisch bewiesen werden kann.
 
 
 === Welche Relevanz hat die Frage?
 
-Im Fachbereich der Philosophischen Mathematik wird versucht, Gegenstand, Voraussetzungen, Natur und Methoden der Mathematik zu ergründen und zu verstehen. Es werden unter anderem Überlegungen angestellt, ob die Mathematik ein von Menschen erdachtes Konzept ist oder ob Menschen sie lediglich entdeckt haben, gerade entdecken oder noch entdecken werden. #cite("BOOK:New-Directions-in-the-Philosophy-of-Mathematics:1998") Wenn $pi$ nicht nur in einem direkten oder indirekten Zusammenhang, mit der Geometrie bewiesen werden kann, liegt die Vermutung nahe, dass die Menschen ihre Bedeutung nicht oder nicht in Gänze verstehen, $pi$ in Verbindung mit Kreisen nur ein Indiz für eine tiefgreifendere mathematische Wahrheit ist. Wir als Menschheit (genauer Mathematiker) haben $pi$ im Zusammenhang mit Kreisen definiert. Wenn $pi$ demnach an anderer Stelle ohne Verbindung zu unserer menschlichen Definition Verwendung findet, spricht eben diese Tatsache eher für eine von Menschen entdeckte Mathematik. Das Ergebnis dieser Arbeit wird demnach als Argument für die eine oder andere Perspektive benutzt werden können, kann in jedem Fall zu einem besseren Verständnis der Mathematik im Allgemeinen und der Zahl $pi$ im Speziellen beitragen.
+Im Fachbereich der Philosophischen Mathematik wird versucht, Gegenstand, Voraussetzungen, Natur und Methoden der Mathematik zu ergründen und zu verstehen. Es werden unter anderem Überlegungen angestellt, ob die Mathematik ein von Menschen erdachtes Konzept ist oder ob Menschen sie lediglich entdeckt haben, gerade entdecken oder noch entdecken werden. #cite(<BOOK:New-Directions-in-the-Philosophy-of-Mathematics:1998>) Wenn $pi$ nicht nur in einem direkten oder indirekten Zusammenhang, mit der Geometrie bewiesen werden kann, liegt die Vermutung nahe, dass die Menschen ihre Bedeutung nicht oder nicht in Gänze verstehen, $pi$ in Verbindung mit Kreisen nur ein Indiz für eine tiefgreifendere mathematische Wahrheit ist. Wir als Menschheit (genauer Mathematiker) haben $pi$ im Zusammenhang mit Kreisen definiert. Wenn $pi$ demnach an anderer Stelle ohne Verbindung zu unserer menschlichen Definition Verwendung findet, spricht eben diese Tatsache eher für eine von Menschen entdeckte Mathematik. Das Ergebnis dieser Arbeit wird demnach als Argument für die eine oder andere Perspektive benutzt werden können, kann in jedem Fall zu einem besseren Verständnis der Mathematik im Allgemeinen und der Zahl $pi$ im Speziellen beitragen.
 
 == Hypothese
 
@@ -91,12 +91,12 @@ Im folgenden Teil werden mathematische Grundlagen, die für die weitere Arbeit v
 
 === Division
 
-Um die Kreiszahl $pi$ zu definieren, wird neben Grundlagen der Geometrie noch die Rechenart der Division benötigt. Sie ist eine der vier Grundrechenarten der Mathematik, genauergenommen der Arithmetik, definiert als Umkehroperation der Multiplikation. Es wird ein Dividend durch einen Divisor dividiert, das Resultat nennt sich Quotient. #cite("WEB:Division-Wolfram-Research:2021")
+Um die Kreiszahl $pi$ zu definieren, wird neben Grundlagen der Geometrie noch die Rechenart der Division benötigt. Sie ist eine der vier Grundrechenarten der Mathematik, genauergenommen der Arithmetik, definiert als Umkehroperation der Multiplikation. Es wird ein Dividend durch einen Divisor dividiert, das Resultat nennt sich Quotient. #cite(<WEB:Division-Wolfram-Research:2021>)
 
 
 $ underbrace(a, "Dividend") : underbrace(b, "Divisor") = underbrace(c, "Wert des Quotienten") $
 
-Wenn eine Zahl $a$ und eine Zahl $b$ mulltipiziert werden, ergibt sich aus dem Ergebnis $c$ durch Dividieren durch $a$ wieder $b$ und durch Dividieren durch $b$ wieder $a$, sofern $a$ und $b$ nicht Null sind. #cite("WEB:Division-Wolfram-Research:2021") Es gilt demnach das folgende Gleichungssystem.
+Wenn eine Zahl $a$ und eine Zahl $b$ mulltipiziert werden, ergibt sich aus dem Ergebnis $c$ durch Dividieren durch $a$ wieder $b$ und durch Dividieren durch $b$ wieder $a$, sofern $a$ und $b$ nicht Null sind. #cite(<WEB:Division-Wolfram-Research:2021>) Es gilt demnach das folgende Gleichungssystem.
 
 $
 a dot b    &= c  \
@@ -110,7 +110,7 @@ Diese Erkentnisse über die Division reichen aus, um im Folgenden eine formale D
 
 === Kreiszahl Pi
 
-Um $pi$ als Kreiszahl zu begreifen, fehlt an dieser Stellen noch das Verständnis der Geometrie des Kreises. Aus diesem Grund wird im Folgenden seine Definition genauer untersucht. Ein Kreis ist definiert als zweidimensionale Fläche. Sie wird begrenzt durch eine konstant gekrümmte Linie, verlaufend auf allen Punkten, die in einer Entfernung von $r$ von einem Mittelpunkt $O$ liegen. Die Strecke $r$ wird Radius genannt. Der zweifache Radius nennt sich Durchmesser $d$. Er beschreibt eine Strecke verlaufend durch den Mittelpunkt und begrenzt an beiden Enden durch einen Punkt, der auf der Begrenzung des Kreises liegt. #cite("BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015") Diese Definition besteht schon sehr lange, schon Euklid verwendete sie. Er soll den Kreis wie folgt definierte haben: "A circle is a plane figure bounded by one curved line, and such that all straight lines drawn from a certain point within it to the bounding line, are equal. The bounding line is called its circumference and the point, its centre." #cite("BOOK:Euclid-books-I-II:1883") Diese Definition für einen Kreis mit dem Radius $r = 1$ kann grafisch folgendermaßen dargestellt werden. #cite("BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015")
+Um $pi$ als Kreiszahl zu begreifen, fehlt an dieser Stellen noch das Verständnis der Geometrie des Kreises. Aus diesem Grund wird im Folgenden seine Definition genauer untersucht. Ein Kreis ist definiert als zweidimensionale Fläche. Sie wird begrenzt durch eine konstant gekrümmte Linie, verlaufend auf allen Punkten, die in einer Entfernung von $r$ von einem Mittelpunkt $O$ liegen. Die Strecke $r$ wird Radius genannt. Der zweifache Radius nennt sich Durchmesser $d$. Er beschreibt eine Strecke verlaufend durch den Mittelpunkt und begrenzt an beiden Enden durch einen Punkt, der auf der Begrenzung des Kreises liegt. #cite(<BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015>) #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>) Diese Definition besteht schon sehr lange, schon Euklid verwendete sie. Er soll den Kreis wie folgt definierte haben: "A circle is a plane figure bounded by one curved line, and such that all straight lines drawn from a certain point within it to the bounding line, are equal. The bounding line is called its circumference and the point, its centre." #cite(<BOOK:Euclid-books-I-II:1883>) Diese Definition für einen Kreis mit dem Radius $r = 1$ kann grafisch folgendermaßen dargestellt werden. #cite(<BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015>) #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>)
 
 #figure(
   [
@@ -130,13 +130,13 @@ Um $pi$ als Kreiszahl zu begreifen, fehlt an dieser Stellen noch das Verständni
   ]
 )
 
-Mathematiker entdeckten eine besondere Eigenschaft des Kreises: ein jeder Kreis mit einem beliebig gewählten Radius $r$ ($r > 0$) und damit auch Durchmesser $d$, hat einen Umfang $c$ ($c$ für das englische Wort "Circumference"), der dem Durchmesser $d$ multipliziert mit einem konstanten Faktor entspricht. Dieser Faktor wurde über die Zeit als Kreiszahl $pi$ standartisiert. $pi$ entspricht demnach dem Verhälnis von Umfang $c$ und Durchmesser $r$. #cite("BOOK:A-History-of-Pi:2015", "BOOK:Pi-Unleashed:2001", "ARTICLE:The-Tau-Manifesto:2010")
+Mathematiker entdeckten eine besondere Eigenschaft des Kreises: ein jeder Kreis mit einem beliebig gewählten Radius $r$ ($r > 0$) und damit auch Durchmesser $d$, hat einen Umfang $c$ ($c$ für das englische Wort "Circumference"), der dem Durchmesser $d$ multipliziert mit einem konstanten Faktor entspricht. Dieser Faktor wurde über die Zeit als Kreiszahl $pi$ standartisiert. $pi$ entspricht demnach dem Verhälnis von Umfang $c$ und Durchmesser $r$. #cite(<BOOK:A-History-of-Pi:2015>) #cite(<BOOK:Pi-Unleashed:2001>) #cite(<ARTICLE:The-Tau-Manifesto:2010>)
 
 $
 d dot pi &= c space.quad | : d \
 pi       &= frac(c, d)         \
 $
-Wird an gleicher Stelle statt des Durchmessers $d$ der Radius $r$ gewählt, erhält man die ebenfalls standardisierte Zahl $tau$. #cite("ARTICLE:The-Tau-Manifesto:2010")
+Wird an gleicher Stelle statt des Durchmessers $d$ der Radius $r$ gewählt, erhält man die ebenfalls standardisierte Zahl $tau$. #cite(<ARTICLE:The-Tau-Manifesto:2010>)
 
 
 $
@@ -145,7 +145,7 @@ tau       & = frac(c, r)         \
 $
 
 
-$tau$ entspricht exakt dem Zweifachen von $pi$. #cite("ARTICLE:The-Tau-Manifesto:2010")
+$tau$ entspricht exakt dem Zweifachen von $pi$. #cite(<ARTICLE:The-Tau-Manifesto:2010>)
 
 $
 tau                 & = frac(c, r)                & | dot frac(1, 2) \
@@ -159,9 +159,9 @@ frac(tau, 2)        & = pi                        & | dot 2          \
 tau                 & = 2pi                       &                  \
 $
 
-Aus dieser Erkenntnis folgt, in der Mathematik kann, wann immer $2pi$ Verwendung findet, statt seiner auch $tau$ verwendet werden. Für diese Arbeit ist vorallem interessant, dass $tau$ genau wie $pi$ eine direkte Verbindung zu Kreisen hat, wir $tau$ wie $pi$ erst über die Geometrie des Kreises definieren. #cite("ARTICLE:The-Tau-Manifesto:2010")
+Aus dieser Erkenntnis folgt, in der Mathematik kann, wann immer $2pi$ Verwendung findet, statt seiner auch $tau$ verwendet werden. Für diese Arbeit ist vorallem interessant, dass $tau$ genau wie $pi$ eine direkte Verbindung zu Kreisen hat, wir $tau$ wie $pi$ erst über die Geometrie des Kreises definieren. #cite(<ARTICLE:The-Tau-Manifesto:2010>)
 
-$pi$ ist ebenfalls essenziell um den Flächeninhalt eins Kreises zu berechnen, denn der Radius $r$ eines Beliebigen Kreises zum Quadrat $r^2$, multipliziert mit $pi$ entspricht dem Flächeninhalt $A$ des Kreises. #cite("ARTICLE:AREA-INSIDE-THE-CIRCLE-INTUITIVE-AND-RIGOROUSPROOFS:2017") Dies kann wie folgt grafisch dargestellt werden.
+$pi$ ist ebenfalls essenziell um den Flächeninhalt eins Kreises zu berechnen, denn der Radius $r$ eines Beliebigen Kreises zum Quadrat $r^2$, multipliziert mit $pi$ entspricht dem Flächeninhalt $A$ des Kreises. #cite(<ARTICLE:AREA-INSIDE-THE-CIRCLE-INTUITIVE-AND-RIGOROUSPROOFS:2017>) Dies kann wie folgt grafisch dargestellt werden.
 
 #figure(
   [
@@ -179,7 +179,7 @@ $pi$ ist ebenfalls essenziell um den Flächeninhalt eins Kreises zu berechnen, d
   ]
 )
 
-Schon Archimedes erkannte und bewies mathematisch, $pi$ ist eine Konstante. #cite("ARTICLE:CIRCULAR-REASONING-WHO-FIRST-PROVED-THAT-C/d-IS-A-CONSTANT:2013") Daraus folgt, $pi$ kann berechnet werden, damit auch der Umfang eines jeden Kreises. Außerdem ist es mathematisch bewiesen, dass $pi$ eine irrationale Zahl ist (nicht als Bruch dargestellt werden kann), es daher nicht möglich ist, ihren genauen Wert zu erfahren. Es kann nur numerische Annäherungen mit einer gewissen Präzision geben. #cite("ARTICLE:On-Discovering-and-Proving-that-Pi-Is-Irrational:2010") Nun zu einer Möglichkeit wie $pi$ berechnet werden kann. Wie bereits erwähnt, sind Mathematikern zahlreiche solcher Methoden bekannt, weit mehr als es im Zuge dieser Arbeit Sinn hätte, zu erläutern. #cite("ARTICLE:The-Quest-for-Pi:1996", "ARTICLE:A-DETAILED-PROOF-OF-THE-CHUDNOVSKY-FORMULA-WITH-MEANS-OF-BASIC-COMPLEX-ANALYSIS:2020", "BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015") Aus diesem Grund wird für diesen Teil nur beispielhaft Archimedes Methode erläutert. Er bemerkte, dass regelmäßige Polygone, die innerhalb und außerhalb eines Kreises gezeichnet werden, einen Umfang haben, der nahezu dem Umfang des Kreises entspricht. Dabei gilt, je mehr Seiten das genutzte Polygon hat, um so näher liegt sein Umfang an dem des Kreises. #cite("BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015", "ARTICLE:The-Quest-for-Pi:1996") Im Folgenden für einige Polygone dargestellt.
+Schon Archimedes erkannte und bewies mathematisch, $pi$ ist eine Konstante. #cite(<ARTICLE:CIRCULAR-REASONING-WHO-FIRST-PROVED-THAT-C-over-d-IS-A-CONSTANT:2013>) Daraus folgt, $pi$ kann berechnet werden, damit auch der Umfang eines jeden Kreises. Außerdem ist es mathematisch bewiesen, dass $pi$ eine irrationale Zahl ist (nicht als Bruch dargestellt werden kann), es daher nicht möglich ist, ihren genauen Wert zu erfahren. Es kann nur numerische Annäherungen mit einer gewissen Präzision geben. #cite(<ARTICLE:On-Discovering-and-Proving-that-Pi-Is-Irrational:2010>) Nun zu einer Möglichkeit wie $pi$ berechnet werden kann. Wie bereits erwähnt, sind Mathematikern zahlreiche solcher Methoden bekannt, weit mehr als es im Zuge dieser Arbeit Sinn hätte, zu erläutern. #cite(<ARTICLE:The-Quest-for-Pi:1996>) #cite(<ARTICLE:A-DETAILED-PROOF-OF-THE-CHUDNOVSKY-FORMULA-WITH-MEANS-OF-BASIC-COMPLEX-ANALYSIS:2020>) #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>) Aus diesem Grund wird für diesen Teil nur beispielhaft Archimedes Methode erläutert. Er bemerkte, dass regelmäßige Polygone, die innerhalb und außerhalb eines Kreises gezeichnet werden, einen Umfang haben, der nahezu dem Umfang des Kreises entspricht. Dabei gilt, je mehr Seiten das genutzte Polygon hat, um so näher liegt sein Umfang an dem des Kreises. #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>) #cite(<ARTICLE:The-Quest-for-Pi:1996>) Im Folgenden für einige Polygone dargestellt.
 
 #figure(
   [
@@ -211,7 +211,7 @@ Schon Archimedes erkannte und bewies mathematisch, $pi$ ist eine Konstante. #cit
   ]
 )
 
-Archimedes definierte $pi$ nicht genau, sondern als zwischen dem Umfang des kleineren Polygons $U_1$ und dem Umfang des größeren Polygons $U_2$ liegenden $U_1 > pi > U_2$. #cite("BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015", "ARTICLE:The-Quest-for-Pi:1996")
+Archimedes definierte $pi$ nicht genau, sondern als zwischen dem Umfang des kleineren Polygons $U_1$ und dem Umfang des größeren Polygons $U_2$ liegenden $U_1 > pi > U_2$. #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>) #cite(<ARTICLE:The-Quest-for-Pi:1996>)
 
 == Fallanalyse
 
@@ -236,7 +236,7 @@ $
 pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2) + sqrt(1 - (-1 + k dot frac(2, n))^2)
 $
 
-Statt hier nur zu beweisen, dass besagte Formel eine Verbindung zum Kreis hat, wird im Folgenden ihre Entwicklung reproduziert. Es wird gezeigt werden, dass ihr zugrunde die Geometrie des Kreises liegt, da sie sich aus eben jener ableiten lässt. Dafür ist an dieser Stelle ein mathematischer Zusammenhang mit $pi$ und dem Kreis, der weiter oben schon erwähnt wurde, wichtig. Zur Erinnerung: der Radius $r$ eines beliebigen Kreises zum Quadrat $r^2$ multipliziert mit $pi$ entspricht der Fläche $A$ des Kreises. #cite("BOOK:Euclid-books-I-II:1883")
+Statt hier nur zu beweisen, dass besagte Formel eine Verbindung zum Kreis hat, wird im Folgenden ihre Entwicklung reproduziert. Es wird gezeigt werden, dass ihr zugrunde die Geometrie des Kreises liegt, da sie sich aus eben jener ableiten lässt. Dafür ist an dieser Stelle ein mathematischer Zusammenhang mit $pi$ und dem Kreis, der weiter oben schon erwähnt wurde, wichtig. Zur Erinnerung: der Radius $r$ eines beliebigen Kreises zum Quadrat $r^2$ multipliziert mit $pi$ entspricht der Fläche $A$ des Kreises. #cite(<BOOK:Euclid-books-I-II:1883>)
 
 #figure(
   [
@@ -261,7 +261,9 @@ Daraus folgt, wenn es möglich ist ohne Verwendung von $pi$ den Flächeninhalt $
     #default_coordinate_system([
       #place(center + horizon, circle(radius: 100pt))
       #place(right + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
-        #line(length: 100%, start: (0%, 100%), angle: -45deg, stroke: color2)
+        #place(bottom + left, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
+          #line(length: 100%, start: (0%, 100%), angle: -45deg, stroke: color2)
+        ])
       ])
       #place(center + horizon, dx: 25%, dy: -7pt, text(fill: color2, [$ r = 1 $]))
     ])
@@ -281,7 +283,7 @@ A &= pi \
 $
 
 Folglich kann das Ergebnis für den Flächeninhalt $A$ direkt, ohne weitere Umformungen als Wert für $pi$ verwendet werden.
-Die Idee im nächten Schritt: den Kreis mit Flächen anzunähern, deren Inhalt sich leichter berechnen lässt, als der des Kreises. Optimalerweise so, dass endlos neue Flächen hinzugefügt oder in ihrer Form nach einem festgelegten Schema verändert werden können, um die Genauigkeit mit jeder Ite­ra­ti­on der Berechungen zu verbessern (es wird ein Grenzprozess konstruiert). Eines der besten mathematischen Instrumente, um eine solche Vorgehensweise zu entwickeln, ist die Analysis, genauer die Integralrechnung. #cite("BOOK:Das-kleine-Buch-der-Integralrechnung:2013") Bekannt ist an dieser Stelle die allgemeinen Definition des Kreises. Aus dieser muss nun eine Funktion für das Interval $[-1;1]$ gebildet werden, zum Beispiel über den Satz des Pythagoras. #cite("BOOK:Beweise-zur-Satzgruppe-des-Pythagoras-Analyse-und-Vergleich-ihrer-Behandlung-in-ausgewaehlten-gymnasialen-Unterrichtswerken-der-Jahrgangsstufe-9:2011") Aus jedem Punkt des Kreises kann ein rechtwinkliges Dreieck konstruiert werden. Die Hypotenuse hat dabei immer die Länge des Kreisradius $r$, denn genau diese Eigenschaft definiert den Kreis überhaupt. Die Kathete $a$ wird dem $x$-Wert und Kathete $b$ dem $y$-Wert zugeordnet. Es kann beispielsweise das folgende Dreieck konstruiert werden.
+Die Idee im nächten Schritt: den Kreis mit Flächen anzunähern, deren Inhalt sich leichter berechnen lässt, als der des Kreises. Optimalerweise so, dass endlos neue Flächen hinzugefügt oder in ihrer Form nach einem festgelegten Schema verändert werden können, um die Genauigkeit mit jeder Ite­ra­ti­on der Berechungen zu verbessern (es wird ein Grenzprozess konstruiert). Eines der besten mathematischen Instrumente, um eine solche Vorgehensweise zu entwickeln, ist die Analysis, genauer die Integralrechnung. #cite(<BOOK:Das-kleine-Buch-der-Integralrechnung:2013>) Bekannt ist an dieser Stelle die allgemeinen Definition des Kreises. Aus dieser muss nun eine Funktion für das Interval $[-1;1]$ gebildet werden, zum Beispiel über den Satz des Pythagoras. #cite(<BOOK:Beweise-zur-Satzgruppe-des-Pythagoras-Analyse-und-Vergleich-ihrer-Behandlung-in-ausgewaehlten-gymnasialen-Unterrichtswerken-der-Jahrgangsstufe-9:2011>) Aus jedem Punkt des Kreises kann ein rechtwinkliges Dreieck konstruiert werden. Die Hypotenuse hat dabei immer die Länge des Kreisradius $r$, denn genau diese Eigenschaft definiert den Kreis überhaupt. Die Kathete $a$ wird dem $x$-Wert und Kathete $b$ dem $y$-Wert zugeordnet. Es kann beispielsweise das folgende Dreieck konstruiert werden.
 
 #figure(
   [
@@ -329,7 +331,7 @@ f_1(x)    & = sqrt(r^2 - x^2)                  &               \
 f_2(x)    & = - sqrt(r^2 - x^2)                &               \
 $
 
-$r$ wurde, um $pi$ zu berechnen, weiter oben als $r = 1$ definiert. Durch Einsetzen von $r = 1$ und anschließendes Vereinfachen ergeben sich die Funktionen $f_1(x) = sqrt(1 - x^2)$ und $f_2(x) = - sqrt(1 - x^2)$ für einen Kreis mit dem Radius $r = 1$ (Einheitskreis). $f_1(x)$ stellt die obere und $f_2(x)$ die untere Seite des Kreises dar. Wie die obere und untere Seite des Kreises, sind auch $f_1(x)$ und $f_2(x)$ die Spiegelung der jeweils anderen Funktion an der $x$-Achse ($f_1(x) = - f_2(x)$). #cite("ARTICLE:CIRCULAR-REASONING-WHO-FIRST-PROVED-THAT-C/d-IS-A-CONSTANT:2013", "BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015")
+$r$ wurde, um $pi$ zu berechnen, weiter oben als $r = 1$ definiert. Durch Einsetzen von $r = 1$ und anschließendes Vereinfachen ergeben sich die Funktionen $f_1(x) = sqrt(1 - x^2)$ und $f_2(x) = - sqrt(1 - x^2)$ für einen Kreis mit dem Radius $r = 1$ (Einheitskreis). $f_1(x)$ stellt die obere und $f_2(x)$ die untere Seite des Kreises dar. Wie die obere und untere Seite des Kreises, sind auch $f_1(x)$ und $f_2(x)$ die Spiegelung der jeweils anderen Funktion an der $x$-Achse ($f_1(x) = - f_2(x)$). #cite(<ARTICLE:CIRCULAR-REASONING-WHO-FIRST-PROVED-THAT-C-over-d-IS-A-CONSTANT:2013>) #cite(<BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015>)
 
 
 #figure(
@@ -378,7 +380,7 @@ $r$ wurde, um $pi$ zu berechnen, weiter oben als $r = 1$ definiert. Durch Einset
   ]
 )
 
-Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)^1 f_1(x) d x$ und $integral_(-1)^1 f_2(x) d x$ als Flächeninhalt (ihrem absoluten Wert). Um die Integrale zu berechnen (ohne Nutzung von $pi$ selbst oder mit $pi$ verbunden Funktionen, wie der Sinusfunktion $sin(x)$) bietet sich an, die Trapezsumme zu verwenden. #cite("BOOK:Das-kleine-Buch-der-Integralrechnung:2013", "BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993") Die Trapezsumme teilt das Integral in viele Trapeze auf (im Grenzprozess unendlich viele Trapeze). Der Flächeninhalt aller Trapeze summiert ist der Grenzwert für das jeweilige Integral. #cite("BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993") Die Trapezsumme wird genauer, je schmaler die Trapeze werden und erfüllt damit perfekt die Anprüche, die es, wie oben schon erwähnt, an eine Methode zur Berechnung von $pi$ gibt. Um $pi$ genauer zu berechnen, kann die Breite $l$ (im weiteren wird die Breite der Trapeze repräsentiert durch $l$) der Trapeze verkleinert werden. Im Folgenden ist diese Methode grafisch für $l = frac(1, 2)$ und $l = frac(1, 5)$ dargestellt.
+Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)^1 f_1(x) d x$ und $integral_(-1)^1 f_2(x) d x$ als Flächeninhalt (ihrem absoluten Wert). Um die Integrale zu berechnen (ohne Nutzung von $pi$ selbst oder mit $pi$ verbunden Funktionen, wie der Sinusfunktion $sin(x)$) bietet sich an, die Trapezsumme zu verwenden. #cite(<BOOK:Das-kleine-Buch-der-Integralrechnung:2013>) #cite(<BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993>) Die Trapezsumme teilt das Integral in viele Trapeze auf (im Grenzprozess unendlich viele Trapeze). Der Flächeninhalt aller Trapeze summiert ist der Grenzwert für das jeweilige Integral. #cite(<BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993>) Die Trapezsumme wird genauer, je schmaler die Trapeze werden und erfüllt damit perfekt die Anprüche, die es, wie oben schon erwähnt, an eine Methode zur Berechnung von $pi$ gibt. Um $pi$ genauer zu berechnen, kann die Breite $l$ (im weiteren wird die Breite der Trapeze repräsentiert durch $l$) der Trapeze verkleinert werden. Im Folgenden ist diese Methode grafisch für $l = frac(1, 2)$ und $l = frac(1, 5)$ dargestellt.
 
 #figure(
   [
@@ -542,7 +544,7 @@ Der Flächeninhalt des Kreises entspricht der Summe der Integrale $integral_(-1)
   ]
 )
 
-Für den an dieser Stelle vorliegenden Sachkontext ergibt sich, dass jedes Trapez an seinen beiden Parallelen durch die Funktionen $f_1(x)$ und $f_2(x)$ begrenzt wird. Wenn eine Seite (ein Parallele zur $y$-Achse) des Trapezes an der Stelle $x$ liegt, dann ist ihre Länge gleich der Differenz zwischen $f_1(x)$ und $f_2(x)$ an genau dieser Stelle $x$. Es lässt sich die Funktion $g(x) = f_1(x) - f_2(x)$ für die Länge einer Trapezseite an einer Stelle $x$ aufstellen. #cite("BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993", "BOOK:Das-kleine-Buch-der-Integralrechnung:2013") $g(x)$ kann wie folgt vereinfacht werden.
+Für den an dieser Stelle vorliegenden Sachkontext ergibt sich, dass jedes Trapez an seinen beiden Parallelen durch die Funktionen $f_1(x)$ und $f_2(x)$ begrenzt wird. Wenn eine Seite (ein Parallele zur $y$-Achse) des Trapezes an der Stelle $x$ liegt, dann ist ihre Länge gleich der Differenz zwischen $f_1(x)$ und $f_2(x)$ an genau dieser Stelle $x$. Es lässt sich die Funktion $g(x) = f_1(x) - f_2(x)$ für die Länge einer Trapezseite an einer Stelle $x$ aufstellen. #cite(<BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993>) #cite(<BOOK:Das-kleine-Buch-der-Integralrechnung:2013>) $g(x)$ kann wie folgt vereinfacht werden.
 
 $
 g(x) &= f_1(x) - f_2(x)                    \
@@ -551,13 +553,13 @@ g(x) &= sqrt(1 - x^2) + sqrt(1 - x^2)      \
 g(x) &= 2 dot sqrt(1 - x^2) = 2 dot f_1(x) \
 $
 
-$g(x)$ kann nun in die allgemeine Form der Trapezsumme als Funktion zur Berechung der Seitenlängen eingesetz werden. Allgemein kann die Trapezsumme wie folgt geschrieben werden. #cite("BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993", "BOOK:Das-kleine-Buch-der-Integralrechnung:2013", "BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015")
+$g(x)$ kann nun in die allgemeine Form der Trapezsumme als Funktion zur Berechung der Seitenlängen eingesetz werden. Allgemein kann die Trapezsumme wie folgt geschrieben werden. #cite(<BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993>) #cite(<BOOK:Das-kleine-Buch-der-Integralrechnung:2013>) #cite(<BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015>)
 
 $
 integral_(a)^(b) t(x) d x = frac(b - a, n) sum_(k=1)^(n) frac(t(a + (k - 1) dot frac(b - a, n)) + t(a + k dot frac(b - a, n)), 2)
 $
 
-$n$ steht dabei für die Anzahl der Trapeze, $a$ ist der Anfang und $b$ das Ende des Integrals. #cite("BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993", "BOOK:Das-kleine-Buch-der-Integralrechnung:2013", "BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015") Im Sachkontext sind die Integralgrenzen als $a = -1$ und $b = 1$ festgelegt, denn in diesem Bereich befindet sich der Einheitskreis ($f_1(x)$, $f_2(x)$ und demnach auch $g(x)$ sind nur im Intervall $[-1,1]$ überhaupt definiert), durch Einsetzen der Werte und Vereinfachen ergibt sich folgende Form.
+$n$ steht dabei für die Anzahl der Trapeze, $a$ ist der Anfang und $b$ das Ende des Integrals. #cite(<BOOK:Encyclopaedia-of-Mathematics-Stochastic-Approximation-Zygmund-Class-of-Functions:1993>) #cite(<BOOK:Das-kleine-Buch-der-Integralrechnung:2013>) #cite(<BOOK:Einfuehrung-Mathematik-Primarstufe-Geometrie:2015>) Im Sachkontext sind die Integralgrenzen als $a = -1$ und $b = 1$ festgelegt, denn in diesem Bereich befindet sich der Einheitskreis ($f_1(x)$, $f_2(x)$ und demnach auch $g(x)$ sind nur im Intervall $[-1,1]$ überhaupt definiert), durch Einsetzen der Werte und Vereinfachen ergibt sich folgende Form.
 
 $
 integral_(a)^(b) t(x) d x  &= frac(b - a, n) &sum_(k=1)^(n) frac(t(a + (k - 1) dot frac(b - a, n)) + t(a + k dot frac(b - a, n)), 2) \
@@ -574,7 +576,7 @@ $
 & pi = lim_(n -> infinity) frac(2, n) sum_(k=1)^(n) sqrt(1 - (-1 + (k - 1) dot frac(2, n))^2) + sqrt(1 - (-1 + k dot frac(2, n))^2)                                                               \
 $
 
-Wenn $n$ beispielsweise bis $n = 1000000$ läuft, dann entspricht das Ergebnis bis zur neunten Nachkommanstelle dem tatsächlichen Wert von $pi$. #cite("BOOK:Pi-Unleashed:2001", "BOOK:A-History-of-Pi:2015", "ARTICLE:The-Quest-for-Pi:1996")
+Wenn $n$ beispielsweise bis $n = 1000000$ läuft, dann entspricht das Ergebnis bis zur neunten Nachkommanstelle dem tatsächlichen Wert von $pi$. #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>) #cite(<ARTICLE:The-Quest-for-Pi:1996>)
 
 $
 & n = 1000000                                                                                                                            \
@@ -591,9 +593,9 @@ kann zweifellos der 1. Kategorie zugeordnet werden, denn ihr Zusammenhang mit de
 
 === Gregory Galperins Billiard Problem
 
-Gregory Galperin stellt in seiner Arbeit "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)", eine Methode zur Berechung von $pi$ vor. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019") Sie ist nicht darauf angelegt besonders schnell, effektiv oder effizient zu sein, aber sie wird von zahlreichen Mathematikern als sehr elegant und lehreich angesehen. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Im Folgenden wird sie genau erklärt, um sie im Anschluss einer der oben genannten Kategorien zu zuordnen. Die folgende Erläuterung weicht von Galperins ursprünglicher Methode in Teilen ab, verändert aber nichts an der zu Grunde liegenden Mathematik. #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017")
+Gregory Galperin stellt in seiner Arbeit "PLAYING POOL WITH PI (THE NUMBER PI FROM A BILLIARD POINT OF VIEW)", eine Methode zur Berechung von $pi$ vor. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) #cite(<VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019>) Sie ist nicht darauf angelegt besonders schnell, effektiv oder effizient zu sein, aber sie wird von zahlreichen Mathematikern als sehr elegant und lehreich angesehen. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) Im Folgenden wird sie genau erklärt, um sie im Anschluss einer der oben genannten Kategorien zu zuordnen. Die folgende Erläuterung weicht von Galperins ursprünglicher Methode in Teilen ab, verändert aber nichts an der zu Grunde liegenden Mathematik. #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>)
 
-Ein Objekt der Masse $M$ bewegt sich mit der Geschwindigkeit $V$ entlang einer Gerade auf ein zweites Objekt der Masse $m$ zu, das stationär ist (seine Geschwindigkeit $v$ ist Null), bevor es perfekt elastisch damit kollidiert (d. h. vor und nach der Kollision hat das System dieselbe Energie), #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "ARTICLE:PLAYING-POOL-WITH-PI:2003") das zweite Objekt in Richtung einer unbeweglichen Wand (gedacht könnte die Wand eine unendliche Masse haben) treibt. #cite("VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017") Das zweite Objekt wird nach einer weiteren perfekten elastischen Kollision mit der Wand reflektiert und kollidiert erneut mit dem ersten Objekt. Dieser Vorgang wiederholt sich, bis sich beide Objekte von der Wand entfernen und die Geschwindigkeit $V$ des ersten Objekts die Geschwindigkeit $v$ des zweiten Objekts übersteigt. Es gelten dabei nur der Energie- und Impulserhaltungssatz, keine anderen physikalischen Gesetze. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019") Das beschriebene System ist in der folgenden Grafik für die ersten zwei Kollisionen modelhaft dargestellt.
+Ein Objekt der Masse $M$ bewegt sich mit der Geschwindigkeit $V$ entlang einer Gerade auf ein zweites Objekt der Masse $m$ zu, das stationär ist (seine Geschwindigkeit $v$ ist Null), bevor es perfekt elastisch damit kollidiert (d. h. vor und nach der Kollision hat das System dieselbe Energie), #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) das zweite Objekt in Richtung einer unbeweglichen Wand (gedacht könnte die Wand eine unendliche Masse haben) treibt. #cite(<VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019>) #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) Das zweite Objekt wird nach einer weiteren perfekten elastischen Kollision mit der Wand reflektiert und kollidiert erneut mit dem ersten Objekt. Dieser Vorgang wiederholt sich, bis sich beide Objekte von der Wand entfernen und die Geschwindigkeit $V$ des ersten Objekts die Geschwindigkeit $v$ des zweiten Objekts übersteigt. Es gelten dabei nur der Energie- und Impulserhaltungssatz, keine anderen physikalischen Gesetze. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) #cite(<VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019>) Das beschriebene System ist in der folgenden Grafik für die ersten zwei Kollisionen modelhaft dargestellt.
 
 #figure(
   [
@@ -642,7 +644,7 @@ Ein Objekt der Masse $M$ bewegt sich mit der Geschwindigkeit $V$ entlang einer G
   ]
 )
 
-Um Galperins Methode durchzuführen, ist hier die Wahl eines Verhältnisses $d$ der beiden Massen $M$ und $m$ ($d = frac(M, n)$) erforderlich. Für $d$ muss dabei gelten $d = 10^(2(n-1)) and n in NN^*$. Theoretisch könnten alle Kollisionen gezählt werden. Nennen wir diese Anzahl an Kollisionen $K$. Wie Galperin beschreibt, ergäbe sich für $K = floor(pi dot 10^((n-1)))$. $K$ kann nur ganzzahlige Werte haben, denn im definierten System existieren nur ganze Kollisionen, die gezählt werden können. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019") $K$ ist equivalent zu den ersten $n$ Stellen von $pi$ somit ist $Pi = frac(K, 10^((n-1)))$ ein Näherungswert für $pi$, der für immer größere $n$ gegen $pi$ strebt. In der folgenden Tabelle sind Werte für $K$, $d$ und dem daraus berechnenten Näherungswert $Pi$ für $pi$ bis $n=9$ aufgelistet.
+Um Galperins Methode durchzuführen, ist hier die Wahl eines Verhältnisses $d$ der beiden Massen $M$ und $m$ ($d = frac(M, n)$) erforderlich. Für $d$ muss dabei gelten $d = 10^(2(n-1)) and n in NN^*$. Theoretisch könnten alle Kollisionen gezählt werden. Nennen wir diese Anzahl an Kollisionen $K$. Wie Galperin beschreibt, ergäbe sich für $K = floor(pi dot 10^((n-1)))$. $K$ kann nur ganzzahlige Werte haben, denn im definierten System existieren nur ganze Kollisionen, die gezählt werden können. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) $K$ ist equivalent zu den ersten $n$ Stellen von $pi$ somit ist $Pi = frac(K, 10^((n-1)))$ ein Näherungswert für $pi$, der für immer größere $n$ gegen $pi$ strebt. In der folgenden Tabelle sind Werte für $K$, $d$ und dem daraus berechnenten Näherungswert $Pi$ für $pi$ bis $n=9$ aufgelistet.
 
 #figure(
   [
@@ -701,7 +703,7 @@ Um Galperins Methode durchzuführen, ist hier die Wahl eines Verhältnisses $d$ 
   ]
 )
 
-Diese Werte können mittels einer Physiksimulation bestätigt werden. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:How-colliding-blocks-act-like-a-beam-of-light-to-compute-pi.:2019", "VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Wie bereits erwähnt, gelten in der gedachten Welt, in der Galperins Methode durchgeführt wird, der Energie- und Impulserhaltungssatz. Der Energieerhaltungssatz kann für $M$, $m$ und den dazugehörigen $V$, $v$ wie folgt geschrieben werden. Nennen wir dabei die gesamt Energie des Systems $q$, $q$ ist eine Konstante.
+Diese Werte können mittels einer Physiksimulation bestätigt werden. #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:How-colliding-blocks-act-like-a-beam-of-light-to-compute-pi.:2019>) #cite(<VIDEO:The-most-unexpected-answer-to-a-counting-puzzle:2019>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) Wie bereits erwähnt, gelten in der gedachten Welt, in der Galperins Methode durchgeführt wird, der Energie- und Impulserhaltungssatz. Der Energieerhaltungssatz kann für $M$, $m$ und den dazugehörigen $V$, $v$ wie folgt geschrieben werden. Nennen wir dabei die gesamt Energie des Systems $q$, $q$ ist eine Konstante.
 
 $
 q  = frac(1, 2) M V^2 + frac(1, 2) m v^2
@@ -716,7 +718,7 @@ q & = frac(1, 2) M V_0^2 + cancel(frac(1, 2) m dot 0^2) \
 q & = frac(1, 2) M V_0^2                                \
 $
 
-Der Energieerhaltungssatz lässt sich auch grafisch darstellen. Dazu werden die Geschwindigkeiten beider Objekte jeweils durch eine Koordinate in einem zweidimensionalen Koordinatensystem repräsentiert (jeder Punkt entspricht einem Paar an Geschwindigkeiten $V$ und $v$), ein Problem der Dynamik wird zu einem der Geomentrie. #cite("ARTICLE:PLAYING-POOL-WITH-PI:2003", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Sei dafür $x = V$ und $y = v$ im Konfigurationsraum (zweidimensionales Koordinatensystem mit $x$ und $y$-Achse, denen jeweils ein Wert oder Freiheitsgrad eines dynamischen Systems zugeordnet wird), so ergibt sich aus dem Energieerhaltungssatz eine Ellipse mit der Gleichung $q = frac(1, 2) M x^2 + frac(1, 2) m y^2$. #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:Why-do-colliding-blocks-compute-pi:2019")
+Der Energieerhaltungssatz lässt sich auch grafisch darstellen. Dazu werden die Geschwindigkeiten beider Objekte jeweils durch eine Koordinate in einem zweidimensionalen Koordinatensystem repräsentiert (jeder Punkt entspricht einem Paar an Geschwindigkeiten $V$ und $v$), ein Problem der Dynamik wird zu einem der Geomentrie. #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) Sei dafür $x = V$ und $y = v$ im Konfigurationsraum (zweidimensionales Koordinatensystem mit $x$ und $y$-Achse, denen jeweils ein Wert oder Freiheitsgrad eines dynamischen Systems zugeordnet wird), so ergibt sich aus dem Energieerhaltungssatz eine Ellipse mit der Gleichung $q = frac(1, 2) M x^2 + frac(1, 2) m y^2$. #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>)
 
 #figure(
   [
@@ -729,7 +731,7 @@ Der Energieerhaltungssatz lässt sich auch grafisch darstellen. Dazu werden die 
   ]
 )
 
-An dieser Stelle wird eine Verbindung zum Kreis gesucht, eine Neuskalierung des Koordinatensystems ist von Vorteil. #cite("ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Skalierung der beiden Achsen $x = V$ und $y = v$ durch multiplizieren mit der Wurzel der jeweiligen Masse ($M$ und $m$) ermöglicht eine Umformung des Energieerhaltungssatzes zu einer Form, die der eines Kreises entspricht. Im ersten Schritt wird die Gleichung der Ellipse $q = frac(1, 2) M x^2 + frac(1, 2) m y^2$, die im Konfigurationsraum den Energieerhaltungssatzes repräsentiert, vereinfacht.
+An dieser Stelle wird eine Verbindung zum Kreis gesucht, eine Neuskalierung des Koordinatensystems ist von Vorteil. #cite(<ARTICLE:The-Dynamics-of-Digits-Calculating-Pi-with-Galperins-Billiards:2017>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) Skalierung der beiden Achsen $x = V$ und $y = v$ durch multiplizieren mit der Wurzel der jeweiligen Masse ($M$ und $m$) ermöglicht eine Umformung des Energieerhaltungssatzes zu einer Form, die der eines Kreises entspricht. Im ersten Schritt wird die Gleichung der Ellipse $q = frac(1, 2) M x^2 + frac(1, 2) m y^2$, die im Konfigurationsraum den Energieerhaltungssatzes repräsentiert, vereinfacht.
 
 $
 q  &= frac(1, 2) M V^2 + frac(1, 2) m v^2 \
@@ -785,7 +787,9 @@ Die Funktionen $E_1(x) = sqrt(2q - x^2)$ und $E_2(x) = - sqrt(2q - x^2)$ beschre
             circle(radius: 100pt, stroke: color3)
           )
           #place(right + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
-            #line(length: 100%, start: (0%, 100%), angle: -45deg, stroke: color2)
+            #place(left + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
+              #line(length: 100%, start: (0%, 100%), angle: -45deg, stroke: color2)
+            ])
           ])
           #place(center + horizon, dx: 25%, dy: -9pt, text(fill: color2, [$ r = sqrt(2q) $]))
         ])
@@ -814,7 +818,7 @@ $
 w = M V + m v
 $
 
-Durch Skalierung unter Berücksichtigung des durch $x = sqrt(M) V$ und $y = sqrt(m) v$ definierten Konfigurationsraums und anschließender Umformung nach $y$ ergibt sich die lineare Funktion $I(x) = frac(w - sqrt(M) x, sqrt(m))$ mit der Steigung $I'(x) = - frac(sqrt(M), sqrt(m))$. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019")
+Durch Skalierung unter Berücksichtigung des durch $x = sqrt(M) V$ und $y = sqrt(m) v$ definierten Konfigurationsraums und anschließender Umformung nach $y$ ergibt sich die lineare Funktion $I(x) = frac(w - sqrt(M) x, sqrt(m))$ mit der Steigung $I'(x) = - frac(sqrt(M), sqrt(m))$. #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>)
 
 $
 x         &= sqrt(M) V                    \
@@ -876,7 +880,7 @@ Diese Funktion $I(x)$ hat zwei Schnittpunkte $P_0$ und $P_1$ mit der Funktion $E
   ]
 )
 
-$P_0$ ist der Punkt, der den Zustand des Systems vor der ersten Kollision symbolisiert und dementsprechend $P_1$ der Punkt, der das System nach der Kollision dargestellt. Nur eine Änderung von $V$ und $v$, so dass sie durch den Punkt $P_1$ repräsentiert werden kann, erfüllt sowohl den Energie- als auch den Impulserhaltungssatz und ist damit die einzig mögliche. Nach der ersten Kollision der beiden Objekte wird das zweite Objekt mit der Masse $m$ mit der Wand kollidieren. Jede Kollision mit der Wand reflektiert, wie auch von Galperin definiert, das Objekt, seine Geschwindigkeit $v$ wird negiert (Vorzeichen ändert sich $v_2 = -v_1$). Im Konfigurationsraum ist diese Kollision mit der Wand repräsentiert durch Spiegelung an der $x$-Achse. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019")
+$P_0$ ist der Punkt, der den Zustand des Systems vor der ersten Kollision symbolisiert und dementsprechend $P_1$ der Punkt, der das System nach der Kollision dargestellt. Nur eine Änderung von $V$ und $v$, so dass sie durch den Punkt $P_1$ repräsentiert werden kann, erfüllt sowohl den Energie- als auch den Impulserhaltungssatz und ist damit die einzig mögliche. Nach der ersten Kollision der beiden Objekte wird das zweite Objekt mit der Masse $m$ mit der Wand kollidieren. Jede Kollision mit der Wand reflektiert, wie auch von Galperin definiert, das Objekt, seine Geschwindigkeit $v$ wird negiert (Vorzeichen ändert sich $v_2 = -v_1$). Im Konfigurationsraum ist diese Kollision mit der Wand repräsentiert durch Spiegelung an der $x$-Achse. #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>)
 
 #figure(
   [
@@ -934,9 +938,9 @@ $P_0$ ist der Punkt, der den Zustand des Systems vor der ersten Kollision symbol
   ]
 )
 
-Wichtig ist anzumerken, dass bei dieser Re­fle­xi­on der Impulserhaltungssatz nicht erfüllt ist und durch Definition nicht erfüllt sein muss, denn die Wand hat eine gedachte unendliche Masse, sie ist nach Definition unbeweglich. #cite("VIDEO:Why-do-colliding-blocks-compute-pi:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019")
+Wichtig ist anzumerken, dass bei dieser Re­fle­xi­on der Impulserhaltungssatz nicht erfüllt ist und durch Definition nicht erfüllt sein muss, denn die Wand hat eine gedachte unendliche Masse, sie ist nach Definition unbeweglich. #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>)
 
-Dieser Vorgang von Kollision der beiden Objekte und anschließender Kollision des zweiten Objekts mit der Wand wiederholt sich, bis sich beide Objekte von der Wand entfernen ($v lt.eq 0$ und $V lt.eq 0$) und die Geschwindigkeit $V$ des ersten Objekts die Geschwindigkeit $v$ des zweiten Objekts übersteigt ($V lt.eq v$). Im Konfigurationsraum dargestellt durch ein Dreieck zwischen der $x$-Achse (repräsentiert $v lt.eq 0$ und $V lt.eq 0$) und einer Line $v = V$ (repräsentiert $V lt.eq v$ und damit die Objekte können nicht mehr kollidieren). #cite("VIDEO:Why-do-colliding-blocks-compute-pi:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019")
+Dieser Vorgang von Kollision der beiden Objekte und anschließender Kollision des zweiten Objekts mit der Wand wiederholt sich, bis sich beide Objekte von der Wand entfernen ($v lt.eq 0$ und $V lt.eq 0$) und die Geschwindigkeit $V$ des ersten Objekts die Geschwindigkeit $v$ des zweiten Objekts übersteigt ($V lt.eq v$). Im Konfigurationsraum dargestellt durch ein Dreieck zwischen der $x$-Achse (repräsentiert $v lt.eq 0$ und $V lt.eq 0$) und einer Line $v = V$ (repräsentiert $V lt.eq v$ und damit die Objekte können nicht mehr kollidieren). #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>)
 
 #figure(
   [
@@ -996,7 +1000,7 @@ Dieser Vorgang von Kollision der beiden Objekte und anschließender Kollision de
   ]
 )
 
-$P_2$ befindet sich in diesem Beispiel noch nicht in der definierten Zone (das Dreieck), der erste Schritt, der die Kollision der zwei Objekte abbildet, wiederholt sich. Bei der Kollision mit der Wand hat sich der Wert für den Gesamtimpuls $w$ so geändert, dass die Funktion $I(x)$ durch $P_2$ verläuft, der Schnittpunkt $P_3$ von $I(x)$ und $E_2(x)$. Befindet sich in der definierten Zone, es wird keine weiteren Kollisionen geben, die es zu zählen gilt. #cite("VIDEO:Why-do-colliding-blocks-compute-pi:2019", "ARTICLE:PLAYING-POOL-WITH-PI:2003", "ARTICLE:Throwing-Pi-at-a-wall:2019")
+$P_2$ befindet sich in diesem Beispiel noch nicht in der definierten Zone (das Dreieck), der erste Schritt, der die Kollision der zwei Objekte abbildet, wiederholt sich. Bei der Kollision mit der Wand hat sich der Wert für den Gesamtimpuls $w$ so geändert, dass die Funktion $I(x)$ durch $P_2$ verläuft, der Schnittpunkt $P_3$ von $I(x)$ und $E_2(x)$. Befindet sich in der definierten Zone, es wird keine weiteren Kollisionen geben, die es zu zählen gilt. #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) #cite(<ARTICLE:PLAYING-POOL-WITH-PI:2003>) #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>)
 
 #figure(
   [
@@ -1302,7 +1306,7 @@ Alle Werte, die durch diese Methode für $K$, $d$ und dem daraus berechnenten N�
   ]
 )
 
-Es ist zu erkennen, warum $K$ equivalent zu den ersten $n$ Stellen von $pi$ ist, denn der $arctan(e)$ nähert sich immer mehr dem Argument $e$ an, je kleiner dieses wird (gerechnet im Bogenmaß). #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Es gilt:
+Es ist zu erkennen, warum $K$ equivalent zu den ersten $n$ Stellen von $pi$ ist, denn der $arctan(e)$ nähert sich immer mehr dem Argument $e$ an, je kleiner dieses wird (gerechnet im Bogenmaß). #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) Es gilt:
 
 $
 lim_(e -> 0) arctan(e) - e = 0
@@ -1347,17 +1351,17 @@ $e$ ist in diesem Fall gleich der Quotient der beiden Wurzeln der Massen $M$ und
   ]
 )
 
-Zusammenfassend lässt sich zu Galperins Methode $pi$ zu berechnen zeigen, dass die Anzahl der Kollisionen durch den Energieerhaltungssatz eine direkte Verbindung zum Kreis (ohne Skalierung, zu einer Ellipse) hat. #cite("ARTICLE:Throwing-Pi-at-a-wall:2019", "VIDEO:Why-do-colliding-blocks-compute-pi:2019") Daraus folgt, auch Galperins Methode lässt sich der 1. Kategorie zuordnen, ihr Zusammenhang mit der Geometrie des Kreises wurde eindeutig belegt.
+Zusammenfassend lässt sich zu Galperins Methode $pi$ zu berechnen zeigen, dass die Anzahl der Kollisionen durch den Energieerhaltungssatz eine direkte Verbindung zum Kreis (ohne Skalierung, zu einer Ellipse) hat. #cite(<ARTICLE:Throwing-Pi-at-a-wall:2019>) #cite(<VIDEO:Why-do-colliding-blocks-compute-pi:2019>) Daraus folgt, auch Galperins Methode lässt sich der 1. Kategorie zuordnen, ihr Zusammenhang mit der Geometrie des Kreises wurde eindeutig belegt.
 
 === Basler Problem
 
-Das Basler Problem, im Grunde die Frage nach der genauen Summe aller Kehrwerte der natürlichen Zahlen zum Quadrat, wurde erstmals von Pietro Mengoli formuliert und später von Leonhard Euler gelöst. Die folgende Gleichung ist Eulers Lösung des Basler Problems. #cite("ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018")
+Das Basler Problem, im Grunde die Frage nach der genauen Summe aller Kehrwerte der natürlichen Zahlen zum Quadrat, wurde erstmals von Pietro Mengoli formuliert und später von Leonhard Euler gelöst. Die folgende Gleichung ist Eulers Lösung des Basler Problems. #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>)
 
 $
 frac(pi^2, 6) = sum_(n = 1)^(infinity) frac(1, n^2)
 $
 
-Es kann auf verschiedenen Arten bewiesen werden, dass auch hier eine Verbindung zwischen $pi$ und Kreis besteht. #cite("ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018") Eulers Lösung beruht beispielweise auf der Taylorreihe der Kardinalsinusfunktion, die ihrerseits wiederum im Zusammenhang mit dem Kreis definiert ist. #cite("WEB:SincFunction-Wolfram-Research:2021", "BOOK:Exploring-Eulers-Constant:2003", "ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018") Auch andere Lösungen können die Verbindung bestätigen. #cite("ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010", "VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018")
+Es kann auf verschiedenen Arten bewiesen werden, dass auch hier eine Verbindung zwischen $pi$ und Kreis besteht. #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>) Eulers Lösung beruht beispielweise auf der Taylorreihe der Kardinalsinusfunktion, die ihrerseits wiederum im Zusammenhang mit dem Kreis definiert ist. #cite(<WEB:SincFunction-Wolfram-Research:2021>) #cite(<BOOK:Exploring-Eulers-Constant:2003>) #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>) Auch andere Lösungen können die Verbindung bestätigen. #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>)
 
 == Zusammenführung und Bewertung der Ergebnisse
 

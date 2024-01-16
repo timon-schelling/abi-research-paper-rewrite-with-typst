@@ -46,7 +46,7 @@
   // Display the bibliography, if any is given.
   if bib != none {
     pagebreak()
-    show bibliography: set text(8.5pt)
+    show bibliography: set text(8.3pt)
     show bibliography: pad.with(x: 0.5pt)
     show bibliography: set heading(numbering: "1.1")
     [
