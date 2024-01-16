@@ -1,12 +1,5 @@
 #import "template.typ": *
 
-#let theme = {
-  sys.inputs.at("theme", default: none)
-}
-
-#set page(fill: rgb("1a1a1a")) if theme == "dark"
-#set text(fill: rgb("c7c7c7")) if theme == "dark"
-
 #let color0 = rgb("#000000")
 #let color1 = rgb("#C10000")
 #let color2 = rgb("#149900")
@@ -29,17 +22,24 @@
 #let bgcolor8 = color8.lighten(70%)
 #let bgcolor9 = color9.lighten(70%)
 
+#let theme = {
+  sys.inputs.at("theme", default: none)
+}
+
+#set page(fill: rgb("1a1a1a")) if theme == "dark"
+#set text(fill: rgb("c7c7c7")) if theme == "dark"
+
 #if theme == "dark" {
   bgcolor0 = color0.lighten(17%)
-  bgcolor1 = color1//.lighten(30%)
-  bgcolor2 = color2//.lighten(30%)
-  bgcolor3 = color3//.lighten(30%)
-  bgcolor4 = color4//.lighten(30%)
-  bgcolor5 = color5//.lighten(30%)
-  bgcolor6 = color6//.lighten(30%)
-  bgcolor7 = color7//.lighten(30%)
-  bgcolor8 = color8//.lighten(30%)
-  bgcolor9 = color9//.lighten(30%)
+  bgcolor1 = color1
+  bgcolor2 = color2
+  bgcolor3 = color3
+  bgcolor4 = color4
+  bgcolor5 = color5
+  bgcolor6 = color6
+  bgcolor7 = color7
+  bgcolor8 = color8
+  bgcolor9 = color9
 
   color0 = rgb("#c7c7c7")
   color1 = color1.lighten(60%)
