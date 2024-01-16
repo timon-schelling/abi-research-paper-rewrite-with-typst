@@ -82,6 +82,8 @@ Es geht in dieser Arbeit nahezu ausschließlich um den Zusammenhang zwischen $pi
 
 In der vorliegenden Arbeit wird versucht, deduktiv die schon erläuterte Hypothese zu überprüfen, indem an einzelnen Sachverhalten ihre Anwendbarkeit mathematisch bewiesen wird. Es werden allerdings auch Beweise anderer Autoren in Folge von Literaturarbeit mit in die Auswertung einbezogen. Die Auswahl der Sachverhalte ist dabei nicht nach einem festgelegten Schema erfolgt, vielmehr wurde bei der Auswahl darauf geachtet, dass sich die Ergebnisse leicht von etwaigen Rezipienten nachvollziehen lassen. Allerdings ist wichtig anzumerken, dass die gewählten Sachverhalte dennoch als repräsentativ eingestuft werden, denn die Rechereche wurde ergebnissoffen durchgeführt, bedeutet es wurde gleichermaßen versucht, die These zu belegen, als auch sie zu widerlegen. Für die Fallanalyse wurde im Voraus festgelegt, in welche Kategorien einzelne Sachverhalte eingeordnet werden und wie diese zu bewerten sind. Jede Kategorie, die dabei mindestens einmal auftrat, wurde mindestens ebenso häufig mit einem Beispiel in der Arbeit repräsentiert.
 
+#pagebreak()
+
 = Hauptteil
 
 == Mathematische Grundlagen
@@ -212,6 +214,8 @@ Schon Archimedes erkannte und bewies mathematisch, $pi$ ist eine Konstante. #cit
 )
 
 Archimedes definierte $pi$ nicht genau, sondern als zwischen dem Umfang des kleineren Polygons $U_1$ und dem Umfang des größeren Polygons $U_2$ liegenden $U_1 > pi > U_2$. #cite(<BOOK:Pi-Unleashed:2001>) #cite(<BOOK:A-History-of-Pi:2015>) #cite(<ARTICLE:The-Quest-for-Pi:1996>)
+
+#pagebreak()
 
 == Fallanalyse
 
@@ -1362,6 +1366,8 @@ frac(pi^2, 6) = sum_(n = 1)^(infinity) frac(1, n^2)
 $
 
 Es kann auf verschiedenen Arten bewiesen werden, dass auch hier eine Verbindung zwischen $pi$ und Kreis besteht. #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>) Eulers Lösung beruht beispielweise auf der Taylorreihe der Kardinalsinusfunktion, die ihrerseits wiederum im Zusammenhang mit dem Kreis definiert ist. #cite(<WEB:SincFunction-Wolfram-Research:2021>) #cite(<BOOK:Exploring-Eulers-Constant:2003>) #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>) Auch andere Lösungen können die Verbindung bestätigen. #cite(<ARTICLE:Summing-inverse-squares-by-euclidean-geometry:2010>) #cite(<VIDEO:Why-is-pi-here-And-why-is-it-squared-A-geometric-answer-to-the-Basel-problem:2018>)
+
+#pagebreak()
 
 == Zusammenführung und Bewertung der Ergebnisse
 
