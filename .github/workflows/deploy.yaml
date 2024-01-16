@@ -27,12 +27,18 @@ jobs:
       - name: Compile
         uses: addnab/docker-run-action@v3
         with:
-          image: ghcr.io/typst/typst:latest
+          image: ghcr.io/timon-schelling/typst:main
           options: -v ${{ github.workspace }}:/data
           run: |
             cd /data
-            typst compile src/main.typ main.pdf
-            cp main.pdf static/index.pdf
+            mkdir target
+            cd target
+
+            typst compile ../src/main.typ main.pdf
+            typst compile ../src/main.typ --input theme=dark main-dark.pdf
+
+            cd ..
+            cp -r target/* static/
 
       - name: Upload
         uses: actions/upload-pages-artifact@v1

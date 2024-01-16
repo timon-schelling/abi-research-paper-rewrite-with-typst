@@ -1,14 +1,11 @@
 #import "template.typ": *
 
-#show: project.with(
-  title: "Pi and seek - Pi ohne Kreis? Wird Pi ohne den Zusammenhang mit der Geometrie eines Kreises verwendet?",
-  authors: (
-    "Timon Schelling",
-  ),
-  date: "27. April 2023",
-  bib: "refs.bib",
-  bib-title: "Literatur",
-)
+#let theme = {
+  sys.inputs.at("theme", default: none)
+}
+
+#set page(fill: rgb("1a1a1a")) if theme == "dark"
+#set text(fill: rgb("c7c7c7")) if theme == "dark"
 
 #let color0 = rgb("#000000")
 #let color1 = rgb("#C10000")
@@ -32,9 +29,43 @@
 #let bgcolor8 = color8.lighten(70%)
 #let bgcolor9 = color9.lighten(70%)
 
+#if theme == "dark" {
+  bgcolor0 = color0.lighten(17%)
+  bgcolor1 = color1//.lighten(30%)
+  bgcolor2 = color2//.lighten(30%)
+  bgcolor3 = color3//.lighten(30%)
+  bgcolor4 = color4//.lighten(30%)
+  bgcolor5 = color5//.lighten(30%)
+  bgcolor6 = color6//.lighten(30%)
+  bgcolor7 = color7//.lighten(30%)
+  bgcolor8 = color8//.lighten(30%)
+  bgcolor9 = color9//.lighten(30%)
+
+  color0 = rgb("#c7c7c7")
+  color1 = color1.lighten(60%)
+  color2 = color2.lighten(60%)
+  color3 = color3.lighten(60%)
+  color4 = color4.lighten(60%)
+  color5 = color5.lighten(60%)
+  color6 = color6.lighten(60%)
+  color7 = color7.lighten(60%)
+  color8 = color8.lighten(60%)
+  color9 = color9.lighten(60%)
+}
+
+#show: project.with(
+  title: "Pi and seek - Pi ohne Kreis? Wird Pi ohne den Zusammenhang mit der Geometrie eines Kreises verwendet?",
+  authors: (
+    "Timon Schelling",
+  ),
+  date: "27. April 2023",
+  bib: "refs.bib",
+  bib-title: "Literatur",
+)
+
 #let default_coordinate_system(body) = rect(width: 240pt, height: 240pt, inset: 0pt, stroke: none)[
   #place(center + horizon, help_lines())
-  #place(center + horizon, axes())
+  #place(center + horizon, axes(fill: color0, stroke: color0))
   #place(right + horizon, dy: -8pt, [$ x $])
   #place(center + top, dx: 8pt, [$ y $])
   #place(center + horizon, rect(width: 200pt, height: 200pt, inset: 0pt, stroke: none)[
@@ -188,23 +219,23 @@ Schon Archimedes erkannte und bewies mathematisch, $pi$ ist eine Konstante. #cit
     #rect(width: 295pt, height: 290pt, inset: 0pt, stroke: none)[
       #place(top + left, rect(width: 140pt, height: 140pt, inset: 0pt, stroke: none, [
         #place(horizon + center, circle(radius: 70pt, stroke: (paint: color1, dash: "densely-dashed")))
-        #place(horizon + center, regular_polygon(sides: 4, radius: 70pt))
-        #place(horizon + center, regular_polygon(sides: 4, radius: 70pt, inner: true))
+        #place(horizon + center, regular_polygon(sides: 4, radius: 70pt, stroke: color0))
+        #place(horizon + center, regular_polygon(sides: 4, radius: 70pt, stroke: color0, inner: true))
       ]))
       #place(top + right, rect(width: 140pt, height: 140pt, inset: 0pt, stroke: none, [
         #place(horizon + center, circle(radius: 70pt, stroke: (paint: color1, dash: "densely-dashed")))
-        #place(horizon + center, regular_polygon(sides: 6, radius: 70pt))
-        #place(horizon + center, regular_polygon(sides: 6, radius: 70pt, inner: true))
+        #place(horizon + center, regular_polygon(sides: 6, radius: 70pt, stroke: color0))
+        #place(horizon + center, regular_polygon(sides: 6, radius: 70pt, stroke: color0, inner: true))
       ]))
       #place(bottom + left, rect(width: 140pt, height: 140pt, inset: 0pt, stroke: none, [
         #place(horizon + center, circle(radius: 70pt, stroke: (paint: color1, dash: "densely-dashed")))
-        #place(horizon + center, regular_polygon(sides: 8, radius: 70pt))
-        #place(horizon + center, regular_polygon(sides: 8, radius: 70pt, inner: true))
+        #place(horizon + center, regular_polygon(sides: 8, radius: 70pt, stroke: color0))
+        #place(horizon + center, regular_polygon(sides: 8, radius: 70pt, stroke: color0, inner: true))
       ]))
       #place(bottom + right, rect(width: 140pt, height: 140pt, inset: 0pt, stroke: none, [
         #place(horizon + center, circle(radius: 70pt, stroke: (paint: color1, dash: "densely-dashed")))
-        #place(horizon + center, regular_polygon(sides: 12, radius: 70pt))
-        #place(horizon + center, regular_polygon(sides: 12, radius: 70pt, inner: true))
+        #place(horizon + center, regular_polygon(sides: 12, radius: 70pt, stroke: color0))
+        #place(horizon + center, regular_polygon(sides: 12, radius: 70pt, stroke: color0, inner: true))
       ]))
     ]
   ],
@@ -222,7 +253,7 @@ Archimedes definierte $pi$ nicht genau, sondern als zwischen dem Umfang des klei
 Im Weiteren wird in dieser Arbeit an Beispielen der Zusammenhang zwischen $pi$ an verschiedenen Stellen der Mathematik und seiner Definition über den Kreis untersucht werden. Um diese Ergebnisse zur Beantwortung der hier gestelleten Frage aufzubereiten, ist es nützlich, sie bereits im Voraus zu kategorisieren und die Bewertung dann anhand dieser Kategorien vorzunehmen. Zu unterscheiden ist erst einmal zwischen einem bestehenden und einem nicht bestehenden Zusammenhang zur Geometrie des Kreises. Bei einem bewiesenen bestehenden Zusammenhang wird zwischen einem geometrischen und einem algebraischen Beweis unterschieden. Wenn kein Zusammenhang besteht, muss noch unterschieden werden, ob beweisbar ist, dass jener nicht besteht oder ob nur eine Vermutung diesen Schluss begründet. Es ergeben sich die folgenden Kategorien.
 
 #table(
-  columns: (3.6cm, auto, auto),
+  columns: (3.6cm, auto, auto), stroke: color0,
   [*Kategorie*], [*Definition*], [*Bewertung*],
   [Kategorie 1:\ Bestehender Zusammenhang mit algebraischem Beweis], [Es besteht ein Zusammenhang zwischen der Verwendung von $pi$ und dem Kreis der algebraisch formal bewiesen werden kann. Der entsprechende Sachverhalt kann formal ausgedrückt werden und anschließend über beliebig viele Schritte in Verbindung zu einer formalen Form des Kreises gebracht werden.], [Ist dies bei einem Sachverhalt der Fall, so besteht zweifellos ein Zusammenhang zwischen der Verwendung von $pi$ und dem Kreis, solange keine Mängel im Vorgehen bewiesen sind.],
   [Kategorie 2:\ Bestehender Zusammenhang mit geometrischem Beweis], [Es besteht ein Zusammenhang zwischen der Verwendung von $pi$ und dem Kreis, der geometrisch gezeigt werden kann. Es muss eindeutig, die gemetrische Form des Kreises die im Sachverhalt verborgen liegt, gezeigt werden.], [Ist dies bei einem Sachverhalt der Fall, so besteht ein Zusammenhang zwischen der Verwendung von $pi$ und dem Kreis, solange keine Mängel im Vorgehen bewiesen sind. Allerdings ist der Zusammenhang vermutlich nicht vollends ergründet. Es sollte daher nach Möglichkeiten gesucht werden, einen formalen Beweis zum besseren Verständnis zu finden.],
@@ -263,7 +294,7 @@ Daraus folgt, wenn es möglich ist ohne Verwendung von $pi$ den Flächeninhalt $
 #figure(
   [
     #default_coordinate_system([
-      #place(center + horizon, circle(radius: 100pt))
+      #place(center + horizon, circle(radius: 100pt, stroke: color0))
       #place(right + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
         #place(bottom + left, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
           #line(length: 100%, start: (0%, 100%), angle: -45deg, stroke: color2)
@@ -292,7 +323,7 @@ Die Idee im nächten Schritt: den Kreis mit Flächen anzunähern, deren Inhalt s
 #figure(
   [
     #default_coordinate_system([
-      #place(center + horizon, circle(radius: 100pt))
+      #place(center + horizon, circle(radius: 100pt, stroke: color0))
       #place(right + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none)[
         #place(left + bottom, rect(width: 50pt, height: 86.602540pt, inset: 0pt, stroke: none)[
           #place(center + horizon, line(start: (100%, 100%), end: (100%, 0%), stroke: color3))
@@ -605,10 +636,10 @@ Ein Objekt der Masse $M$ bewegt sich mit der Geschwindigkeit $V$ entlang einer G
   [
     #rect(width: 350pt, height: 350pt, inset: 0pt, stroke: none)[
       #place(top + center, rect(width: 100%, height: 100pt, inset: 0pt, stroke: none)[
-        #place(horizon + left, line(length: 100%, stroke: black, angle: 90deg))
+        #place(horizon + left, line(length: 100%, stroke: color0, angle: 90deg))
         #place(horizon + right, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
           $ M $
-          #place(horizon + left, dx: -44%, axis(length: 85%, angle: 180deg))
+          #place(horizon + left, dx: -44%, axis(length: 85%, angle: 180deg, stroke: color0))
           #place(horizon + left, dx: -50%, dy: 10pt, [$ V_0 $])
         ]))
         #place(horizon + center, dx: 5%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
@@ -616,28 +647,28 @@ Ein Objekt der Masse $M$ bewegt sich mit der Geschwindigkeit $V$ entlang einer G
         ]))
       ])
       #place(horizon + center, rect(width: 100%, height: 100pt, inset: 0pt, stroke: none)[
-        #place(horizon + left, line(length: 100%, stroke: black, angle: 90deg))
+        #place(horizon + left, line(length: 100%, stroke: color0, angle: 90deg))
         #place(horizon + center, dx: 15%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
           $ M $
-          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg))
+          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg, stroke: color0))
           #place(horizon + left, dx: -33.5%, dy: 10pt, [$ V_1 $])
         ]))
         #place(horizon + left, dx: 15%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
           $ m $
-          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg))
+          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg, stroke: color0))
           #place(horizon + left, dx: -33.5%, dy: 10pt, [$ v_1 $])
         ]))
       ])
       #place(bottom + center, rect(width: 100%, height: 100pt, inset: 0pt, stroke: none)[
-        #place(horizon + left, line(length: 100%, stroke: black, angle: 90deg))
+        #place(horizon + left, line(length: 100%, stroke: color0, angle: 90deg))
         #place(horizon + center, dx: 5%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
           $ M $
-          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg))
+          #place(horizon + left, dx: -29%, axis(length: 55%, angle: 180deg, stroke: color0))
           #place(horizon + left, dx: -33.5%, dy: 10pt, [$ V_1 $])
         ]))
         #place(horizon + left, dx: 7.5%, rect(width: 60pt, height: 60pt, inset: 0pt, stroke: color0, fill: bgcolor0, [
           $ m $
-          #place(horizon + right, dx: 29%, axis(length: 55%))
+          #place(horizon + right, dx: 29%, axis(length: 55%, stroke: color0))
           #place(horizon + right, dx: 33.5%, dy: 10pt, [$ v_1 $])
         ]))
       ])
@@ -654,6 +685,7 @@ Um Galperins Methode durchzuführen, ist hier die Wahl eines Verhältnisses $d$ 
   [
     #table(
       inset: 8pt,
+      stroke: color0,
       columns: (auto, auto, auto, auto),
       [$n$], [$K$], [$d$], [$Pi$],
       [
@@ -1101,6 +1133,7 @@ Die Summe der die Punkte verbindenen Linien ergibt $K$ (im Beispiel $K = 3$). Al
       #place(left + horizon, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 0%, dy: 25%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 135deg, end: 180deg)
           )
@@ -1109,6 +1142,7 @@ Die Summe der die Punkte verbindenen Linien ergibt $K$ (im Beispiel $K = 3$). Al
       #place(center + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 0%, dy: 0%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 315deg, end: 360deg)
           )
@@ -1117,6 +1151,7 @@ Die Summe der die Punkte verbindenen Linien ergibt $K$ (im Beispiel $K = 3$). Al
       #place(center + top, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 17.5%, dy: 0%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 135deg, end: 180deg)
           )
@@ -1125,6 +1160,7 @@ Die Summe der die Punkte verbindenen Linien ergibt $K$ (im Beispiel $K = 3$). Al
       #place(right + horizon, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 0%, dy: 0%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 315deg, end: 360deg)
           )
@@ -1184,6 +1220,7 @@ Mit Hilfe des Kreiswinkelsatzes lässt sich beweisen, dass sich alle Kreisbögen
       #place(center + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 0%, dy: 0%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 315deg, end: 360deg)
           )
@@ -1192,6 +1229,7 @@ Mit Hilfe des Kreiswinkelsatzes lässt sich beweisen, dass sich alle Kreisbögen
       #place(center + horizon, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 0%, dy: 0%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 270deg, end: 360deg)
           )
@@ -1236,6 +1274,7 @@ Der Winkel $phi$ berechnet sich aus der Steigung von $I(x)$, $I'(x) = - frac(sqr
       #place(center + bottom, rect(width: 100pt, height: 100pt, inset: 0pt, stroke: none, [
         #move(dx: 60%, dy: 0%,
           path(
+            stroke: color0,
             closed: false,
             ..arc(radius: 50pt, start: 315deg, end: 360deg)
           )
@@ -1273,6 +1312,7 @@ Alle Werte, die durch diese Methode für $K$, $d$ und dem daraus berechnenten N�
   [
     #table(
       inset: 8pt,
+      stroke: color0,
       columns: (auto, auto, auto, auto),
       [$n$], [$K$], [$d$], [$Pi$],
       [
@@ -1322,6 +1362,7 @@ $e$ ist in diesem Fall gleich der Quotient der beiden Wurzeln der Massen $M$ und
   [
     #table(
       inset: 8pt,
+      stroke: color0,
       columns: (auto, auto, auto),
       [$frac(sqrt(m), sqrt(M))$], [$arctan(frac(sqrt(m), sqrt(M)))$], [$abs(arctan(frac(sqrt(m), sqrt(M))))$],
       align(left)[
